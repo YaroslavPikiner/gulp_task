@@ -1,5 +1,11 @@
 function hello(a) {
-    console.log(`hello ${a}`)
-};
+  console.log(`hello ${a}`)
+}
 
-hello("Yar1");
+function from(a) {
+    console.log(`hello ${a}`)
+  }
+  
+
+  hello('1')
+  from('2')

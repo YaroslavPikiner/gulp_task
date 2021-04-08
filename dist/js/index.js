@@ -1,1 +1,1 @@
-function hello(l){console.log(`hello ${l}`)}hello("Yar1");
+function hello(o){console.log(`hello ${o}`)}function from(o){console.log(`hello ${o}`)}hello("1"),from("2");
