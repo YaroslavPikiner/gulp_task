@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body>  
-    <h1>hello</h1>
-    
+
+<body>
+    <main class="wrapper">
+        <div class="header">
+            <div class="header__body">
+                <ul class="header__list">
+                    <li class="header__item">My Cart </li>
+                    <li class="header__item">Choose Lab </li>
+                    <li class="header__item header__item--disabled">Rentals Return </li>
+                    <li class="header__item header__item--disabled">Checkout </li>
+                    <li class="header__item header__item--disabled">Order Placed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="cards__body">
+                <div class="cards__list">
+                    <div class="cards__item">
+                        <span class="cards__icon"></span>
+                        <div class="cards__text">
+                            <p class="text__title">Plymouth Meeting, Pennsylvania Testing Laboratory</p>
+                            <div class="text__details">
+                                <p class="details__range">78 miles</p>
+                                <p class="details__view">View Details <i class="fa fa-arrow-right"></i></p>
+                            </div>
+                        </div>
+                        <div class="cards__offer">
+                            <p class="offers__title">Turn Around Time:</p>
+                            <div class="offers">
+                                <input class="offers__item" type="radio" id="1day" name="1day">
+                                <label for="vehicle1"> 1 Day </label><br>
+                                <input class="offers__item" type="radio" id="2day" name="2day">
+                                <label for="vehicle2"> 2 Days </label><br>
+                                <input class="offers__item" type="radio" id="1Week" name="1Week">
+                                <label for="vehicle3"> 1 Week </label>
+                            </div>
+                            <div class="offers__price">
+                                <p class="offers__item">$ 1200.00</p>
+                                <p class="offers__item">$ 900.50</p>
+                                <p class="offers__item">$ 150.00</p>
+                            </div>
+                        </div>
+                        <button class="btn cards__btn"><i class="fa fa-arrow-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="./js/index.js"></script>
 </body>
+
 </html>
