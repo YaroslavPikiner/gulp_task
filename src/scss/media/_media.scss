@@ -4,6 +4,12 @@
     max-width: 320px;
   }
 
+  .header {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+
   .text__title {
     max-width: 280px;
   }

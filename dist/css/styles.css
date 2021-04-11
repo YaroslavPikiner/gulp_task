@@ -604,6 +604,10 @@ table {
     max-width: 320px;
   }
 
+  .header__list {
+    flex-wrap: wrap;
+  }
+
   .text__title {
     max-width: 280px;
   }
