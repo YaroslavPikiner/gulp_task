@@ -1,7 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
 .wrapper {
   margin: 127px auto;
   max-width: 1338px;
@@ -31,7 +27,7 @@ html {
 
 .header__item {
   font-size: 1.25rem;
-  font-family: 'Avenir', 'sans-serif';
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   transition: all 0.2s;
   color: #262e4f;
@@ -69,6 +65,7 @@ li>i {
   min-height: 136px;
   border: solid 2px #e4e8f0;
   margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cards__wrapper {
@@ -132,7 +129,6 @@ li>i {
 }
 
 .cards__offers .offers__title {
-  font-family: DINPro;
   font-size: 0.65rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -159,7 +155,6 @@ li>i {
 }
 
 .text__title {
-  font-family: Avenir;
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 26px;
