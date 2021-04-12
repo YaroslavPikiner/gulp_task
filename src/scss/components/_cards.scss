@@ -8,7 +8,7 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
-    min-height: 136px;
+    padding: 40px;
     border: solid 2px #e4e8f0;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -20,12 +20,12 @@
 
   &__img {
     &--original {
-      padding: 20px 23px 0 30px;
+      margin-top: -10px;
+      padding-right: 20px;
     }
   }
 
   &__text {
-    padding-top: 30px;
     max-width: 331px;
   }
 
@@ -34,7 +34,6 @@
   }
 
   &__btn {
-    margin: auto 0;
     width: 36px;
     height: 34px;
     border: solid 2px #2c49c5;
@@ -59,7 +58,6 @@
 
   &__offers {
     flex-basis: 47%;
-    padding-top: 40px;
     .offers {
       display: flex;
       flex-direction: row;

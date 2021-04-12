@@ -7,7 +7,7 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
-  min-height: 136px;
+  padding: 40px;
   border: solid 2px #e4e8f0;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -18,11 +18,11 @@
 }
 
 .cards__img--original {
-  padding: 20px 23px 0 30px;
+  margin-top: -10px;
+  padding-right: 20px;
 }
 
 .cards__text {
-  padding-top: 30px;
   max-width: 331px;
 }
 
@@ -31,7 +31,6 @@
 }
 
 .cards__btn {
-  margin: auto 0;
   width: 36px;
   height: 34px;
   border: solid 2px #2c49c5;
@@ -56,7 +55,6 @@
 
 .cards__offers {
   flex-basis: 47%;
-  padding-top: 40px;
 }
 
 .cards__offers .offers {
@@ -526,9 +524,13 @@ table {
     display: block;
   }
 
+  .cards__wrapper {
+    order: -1;
+    width: calc(100% - 100px);
+  }
+
   .cards__item {
     flex-wrap: wrap;
-    flex-direction: row-reverse;
   }
 
   .cards__text {
@@ -540,9 +542,9 @@ table {
   }
 
   .cards__offers {
-    margin: 0 0 30px 100px;
+    margin: 0 0 30px 65px;
+    padding-top: 10px;
     display: flex;
-    flex-wrap: wrap;
     flex-basis: 100%;
   }
 
@@ -565,35 +567,17 @@ table {
   }
 
   .cards__offers .offers__price__item {
-    margin-right: 47px;
+    margin-right: 34px;
+    width: 80px;
   }
 
   .text__title {
     font-size: 16px;
     line-height: 24px;
-    width: auto;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .text__title {
-    max-width: 200px;
-  }
-
-  .cards__offers {
-    margin: 0 0 30px 100px;
-  }
-
-  .cards__offers .offers__price {
-    margin-left: 28px;
-  }
-
-  .cards__offers .offers__price__item {
-    margin-right: 31px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 500px) {
   .wrapper {
     max-width: 320px;
   }
@@ -608,6 +592,7 @@ table {
 
   .cards__wrapper {
     flex-direction: column;
+    width: 100%;
   }
 
   .cards__text {
@@ -621,6 +606,7 @@ table {
   .cards__item {
     padding: 20px;
     position: unset;
+    flex-direction: column;
   }
 
   .cards__btn {
@@ -664,6 +650,7 @@ table {
   .cards__offers .offers__title {
     max-width: 115px;
     padding-top: 0;
+    margin-left: 25px;
   }
 
   .cards__offers .offers__item {
@@ -673,7 +660,7 @@ table {
   }
 
   .cards__offers .offers__item>div {
-    width: 210px;
+    width: 300%;
     height: 1px;
     margin: 10px 0 10px 0;
     background-color: #e4e8f0;

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 500px) {
   .wrapper {
     max-width: 320px;
   }
@@ -16,6 +16,7 @@
   .cards {
     &__wrapper {
       flex-direction: column;
+      width: 100%;
     }
 
     &__text {
@@ -29,6 +30,7 @@
     &__item {
       padding: 20px;
       position: unset;
+      flex-direction: column;
     }
 
     &__btn {
@@ -70,6 +72,7 @@
       .offers__title {
         max-width: 115px;
         padding-top: 0;
+        margin-left: 25px;
       }
 
       .offers__item {
@@ -79,7 +82,7 @@
       }
 
       .offers__item > div {
-        width: 210px;
+        width: 300%;
         height: 1px;
         margin: 10px 0 10px 0;
         background-color: #e4e8f0;
@@ -100,25 +103,6 @@
         width: 262px;
         height: 5px;
         background-color: rgb(0, 0, 0);
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .text__title {
-    max-width: 200px;
-  }
-
-  .cards {
-    &__offers {
-      margin: 0 0 30px 100px;
-      .offers__price {
-        margin-left: 28px;
-      }
-
-      .offers__price__item {
-        margin-right: 31px;
       }
     }
   }
@@ -147,9 +131,15 @@
   }
 
   .cards {
+    &__wrapper {
+      order: -1;
+      width: calc(100% - 100px);
+    }
+
     &__item {
       flex-wrap: wrap;
-      flex-direction: row-reverse;
+      
+      // flex-direction: row-reverse;
     }
 
     &__text {
@@ -161,9 +151,9 @@
     }
 
     &__offers {
-      margin: 0 0 30px 100px;
+      margin: 0 0 30px 65px;
+      padding-top: 10px;
       display: flex;
-      flex-wrap: wrap;
       flex-basis: 100%;
       .offers {
         margin-bottom: 10px;
@@ -184,7 +174,8 @@
       }
 
       .offers__price__item {
-        margin-right: 47px;
+        margin-right: 34px;
+        width: 80px;
       }
     }
   }
@@ -192,6 +183,5 @@
   .text__title {
     font-size: 16px;
     line-height: 24px;
-    width: auto;
   }
 }
