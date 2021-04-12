@@ -1,7 +1,15 @@
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     max-width: 360px;
-    overflow: hidden ;
+  }
+
+  .text__details {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .details__range {
+    margin-left: 10px;
   }
 
   .header {
@@ -11,28 +19,25 @@
   }
 
   .text__title {
-    max-width: 280px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .cards {
     &__wrapper {
       flex-direction: column;
-      width: 100%;
-      padding-left: 20px;
-    }
-
-    &__text {
-      padding-top: 10px;
+      min-width: 300px;
     }
 
     &__img--original {
-      padding: 0;
+      padding: 10px 0 0 10px;
+      width: 34px;
+      height: 34px;
     }
 
     &__item {
+      height: 372px;
       padding: 20px;
-      position: unset;
-      flex-direction: column;
     }
 
     &__btn {
@@ -70,13 +75,13 @@
       .offers__wrapper {
         display: flex;
         flex-direction: row;
-        
+        justify-content: center;
       }
 
       .offers__title {
         max-width: 115px;
         padding-top: 0;
-        margin-left: 25px;
+        margin-left: 10px;
       }
 
       .offers__item {
@@ -151,6 +156,7 @@
     }
 
     &__item {
+      height: 174px;
       flex-wrap: wrap;
       // flex-direction: row-reverse;
     }

@@ -1,3 +1,7 @@
+.cards {
+  margin: 20px;
+}
+
 .cards__list {
   display: flex;
   flex-direction: column;
@@ -8,6 +12,7 @@
   align-items: start;
   justify-content: space-between;
   padding: 40px;
+  height: 136px;
   border: solid 2px #e4e8f0;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -128,8 +133,8 @@
 
 .offers__item__price {
   font-size: 14px;
-  font-weight: 900;
-  min-width: 65px;
+  font-weight: bold;
+  min-width: 70px;
   margin-left: 20px;
 }
 
@@ -539,6 +544,7 @@ table {
   }
 
   .cards__item {
+    height: 174px;
     flex-wrap: wrap;
   }
 
@@ -585,10 +591,18 @@ table {
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     max-width: 360px;
-    overflow: hidden;
+  }
+
+  .text__details {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .details__range {
+    margin-left: 10px;
   }
 
   .header__list {
@@ -596,27 +610,24 @@ table {
   }
 
   .text__title {
-    max-width: 280px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .cards__wrapper {
     flex-direction: column;
-    width: 100%;
-    padding-left: 20px;
-  }
-
-  .cards__text {
-    padding-top: 10px;
+    min-width: 300px;
   }
 
   .cards__img--original {
-    padding: 0;
+    padding: 10px 0 0 10px;
+    width: 34px;
+    height: 34px;
   }
 
   .cards__item {
+    height: 372px;
     padding: 20px;
-    position: unset;
-    flex-direction: column;
   }
 
   .cards__btn {
@@ -656,12 +667,13 @@ table {
   .cards__offers .offers__wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .cards__offers .offers__title {
     max-width: 115px;
     padding-top: 0;
-    margin-left: 25px;
+    margin-left: 10px;
   }
 
   .cards__offers .offers__item {
