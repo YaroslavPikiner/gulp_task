@@ -21,12 +21,12 @@
   &__img {
     &--original {
       margin-top: -10px;
-      padding-right: 20px;
+      padding-right: 15px;
     }
   }
 
   &__text {
-    max-width: 331px;
+    max-width: 350px;
   }
 
   &__view__btn {
@@ -88,6 +88,7 @@
     .offers__item > input {
       border: solid 2px #e4e8f0;
       background-color: #ffffff;
+      margin-bottom: 10px;
     }
 
     .offers__price__item {
@@ -106,7 +107,7 @@
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 26px;
-  margin-bottom: 10px;
+  padding: 5px 5px 10px 5px;
   color: #262e4f;
 }
 
@@ -127,4 +128,12 @@
 
 .details__view > i {
   transform: rotate(-45deg);
+}
+
+
+.offers__item__price {
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 65px;
+  margin-left: 20px;
 }

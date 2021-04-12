@@ -19,11 +19,11 @@
 
 .cards__img--original {
   margin-top: -10px;
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .cards__text {
-  max-width: 331px;
+  max-width: 350px;
 }
 
 .cards__view__btn {
@@ -86,6 +86,7 @@
 .cards__offers .offers__item>input {
   border: solid 2px #e4e8f0;
   background-color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .cards__offers .offers__price__item {
@@ -102,7 +103,7 @@
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 26px;
-  margin-bottom: 10px;
+  padding: 5px 5px 10px 5px;
   color: #262e4f;
 }
 
@@ -123,6 +124,13 @@
 
 .details__view>i {
   transform: rotate(-45deg);
+}
+
+.offers__item__price {
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 65px;
+  margin-left: 20px;
 }
 
 .header {
@@ -550,7 +558,6 @@ table {
   }
 
   .cards__offers .offers {
-    margin-bottom: 10px;
     margin-left: 27px;
   }
 
@@ -564,7 +571,7 @@ table {
   }
 
   .cards__offers .offers__item {
-    margin-right: 44px;
+    margin-right: 22px;
   }
 
   .cards__offers .offers__price__item {
@@ -580,7 +587,8 @@ table {
 
 @media only screen and (max-width: 540px) {
   .wrapper {
-    max-width: 320px;
+    max-width: 360px;
+    overflow: hidden;
   }
 
   .header__list {
@@ -594,6 +602,7 @@ table {
   .cards__wrapper {
     flex-direction: column;
     width: 100%;
+    padding-left: 20px;
   }
 
   .cards__text {
@@ -637,6 +646,7 @@ table {
     flex-wrap: nowrap;
     flex-direction: column;
     padding-top: 10px;
+    max-width: 280px;
   }
 
   .cards__offers .offers {
@@ -655,17 +665,27 @@ table {
   }
 
   .cards__offers .offers__item {
-    min-width: 80px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    min-width: 280px;
     position: relative;
   }
 
   .cards__offers .offers__item>div {
-    width: 300%;
+    width: 80%;
     height: 1px;
-    margin: 10px 0 10px 0;
+    margin: 30px 0 10px 0;
     background-color: #e4e8f0;
     position: absolute;
+  }
+
+  .cards__offers input {
+    margin-right: 5px;
+  }
+
+  .cards__offers label {
+    margin-right: 25%;
   }
 
   .cards__offers .offers__price {
