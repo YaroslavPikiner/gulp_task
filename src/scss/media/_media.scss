@@ -131,7 +131,7 @@
 
   .header {
     &__item {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     &__item:not(:last-child):after {
@@ -149,7 +149,7 @@
   .cards {
     &__item {
       flex-wrap: wrap;
-      position: relative;
+      flex-direction: row-reverse;
     }
 
     &__text {
@@ -157,9 +157,7 @@
     }
 
     &__btn {
-      position: absolute;
-      top: 25px;
-      right: 0;
+      order: -1;
     }
 
     &__offers {
@@ -194,5 +192,6 @@
   .text__title {
     font-size: 16px;
     line-height: 24px;
+    width: auto;
   }
 }
