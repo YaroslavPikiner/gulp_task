@@ -1,0 +1,14 @@
+.form {
+  max-width: 500px;
+  margin: 0;
+
+  &__wrapper {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
