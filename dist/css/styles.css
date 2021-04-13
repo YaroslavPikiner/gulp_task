@@ -104,7 +104,7 @@
 }
 
 .cards__offers .offers__item>span {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .cards__offers .offers__price__item {
@@ -563,6 +563,11 @@ table {
     flex-wrap: wrap;
   }
 
+  .cards__img--original {
+    width: 44px;
+    height: 44px;
+  }
+
   .cards__text {
     max-width: 462px;
   }
@@ -576,10 +581,10 @@ table {
   }
 
   .cards__offers {
-    margin: 0 0 30px 65px;
     padding-top: 10px;
     display: flex;
     flex-basis: 100%;
+    justify-content: center;
   }
 
   .cards__offers .offers {
@@ -643,7 +648,7 @@ table {
   }
 
   .cards {
-    max-width: 320px;
+    min-width: 320px;
   }
 
   .cards__wrapper {
@@ -652,7 +657,7 @@ table {
   }
 
   .cards__img--original {
-    padding: 10px 0 0 10px;
+    padding: 0 0 0 5px;
     width: 34px;
     height: 34px;
   }
@@ -691,7 +696,6 @@ table {
     flex-wrap: nowrap;
     flex-direction: column;
     padding-top: 10px;
-    width: 100%;
   }
 
   .cards__offers .offers {
@@ -699,7 +703,7 @@ table {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 13px;
+    margin-left: 0;
   }
 
   .cards__offers .offers__wrapper {
@@ -721,6 +725,7 @@ table {
     justify-content: space-between;
     border-bottom: 1px solid #e4e8f0;
     padding: 10px 0;
+    margin-right: 0;
   }
 
   .cards__offers .offers__item:nth-child(1) {

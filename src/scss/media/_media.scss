@@ -21,7 +21,7 @@
   }
 
   .cards {
-    max-width: 320px;
+    min-width: 320px;
 
     &__wrapper {
       flex-direction: column;
@@ -29,7 +29,7 @@
     }
 
     &__img--original {
-      padding: 10px 0 0 10px;
+      padding: 0 0 0 5px;
       width: 34px;
       height: 34px;
     }
@@ -68,13 +68,12 @@
       flex-wrap: nowrap;
       flex-direction: column;
       padding-top: 10px;
-      width: 100%;
       .offers {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 13px;
+        margin-left: 0;
       }
 
       .offers__wrapper {
@@ -96,6 +95,7 @@
         justify-content: space-between;
         border-bottom: 1px solid #e4e8f0;
         padding: 10px 0;
+        margin-right: 0;
       }
 
       .offers__item:nth-child(1) {
@@ -161,6 +161,11 @@
       // flex-direction: row-reverse;
     }
 
+    &__img--original {
+      width: 44px;
+      height: 44px;
+    }
+
     &__text {
       max-width: 462px;
     }
@@ -174,10 +179,10 @@
     }
 
     &__offers {
-      margin: 0 0 30px 65px;
       padding-top: 10px;
       display: flex;
       flex-basis: 100%;
+      justify-content: center;
       .offers {
         margin-left: 27px;
       }
