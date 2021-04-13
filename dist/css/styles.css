@@ -20,7 +20,7 @@
   justify-content: space-between;
   padding: 20px;
   box-sizing: border-box;
-  min-height: 136px;
+  max-height: 136px;
   border: solid 2px #e4e8f0;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
@@ -530,7 +530,7 @@ table {
   max-width: 1338px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 840px) {
   .wrapper {
     max-width: 690px;
   }
