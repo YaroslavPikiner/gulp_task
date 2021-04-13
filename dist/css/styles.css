@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form__validate {
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.form__title {
+  text-align: center;
+}
+
+.form__field {
+  width: 370px;
+  margin: 0 auto;
+}

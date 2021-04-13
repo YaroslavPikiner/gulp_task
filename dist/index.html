@@ -10,18 +10,55 @@
   <body>
     <section class="form">
       <form method="post" action="/" id="form" class="form__validate">
+        <p class="form__title">Create new account</p>
         <div class="form__field">
           <label for="full-name"></label>
-          <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" required />
+          <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            placeholder="Joe Bloggs"
+            required
+          />
           <i></i>
         </div>
         <div class="form__field">
-          <label for="email-input"></label>
-          <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+          <label for="password-input"></label>
+          <input
+            type="password"
+            name="password-input"
+            id="password-input"
+            required
+          />
         </div>
         <div class="form__field">
-          <label for="password-input"></label>
-          <input type="password" name="password-input" id="password-input" required />
+          <p>
+            <select name="country">
+              <option value="ukraine">Ukraine</option>
+              <option value="spain">Spain</option>
+              <option value="usa">Usa</option>
+              <option value="nipal">Nipal</option>
+              <option value="egypt">Egypt</option>
+              <option value="rome">Rome</option>
+              <option value="canada">Canada</option>
+              <option value="india">India</option>
+              <option value="russia">Russia</option>
+              <option value="china">China</option>
+            </select>
+          </p>
+        </div>
+        <div class="form__field">
+          <input type="radio" name="male-input" id="male-input" required />
+          <label for="male-input">Male</label>
+
+          <input type="radio" name="female-input" id="female-input" required />
+          <label for="female-input">Female</label>
+        </div>
+        <div class="form__field">
+          <input type="checkbox" name="terms" id="terms" required />
+          <label for="terms"
+            >Accept <a href="#">terms</a> and <a href="#">conditions</a></label
+          >
         </div>
         <div class="form__field">
           <label for=""></label>
