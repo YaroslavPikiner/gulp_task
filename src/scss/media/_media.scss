@@ -1,4 +1,4 @@
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
   .text__details {
     font-size: 14px;
     line-height: 20px;
@@ -35,7 +35,7 @@
     }
 
     &__item {
-      max-height: 372px;
+      min-height: 372px;
       padding: 20px;
       display: flex;
       justify-content: center;
@@ -92,7 +92,7 @@
         }
 
         &__item {
-          width: 90%;
+          width: 96%;
           display: flex;
           justify-content: space-between;
           border-bottom: 1px solid #e4e8f0;
@@ -158,7 +158,7 @@
     }
 
     &__item {
-      max-height: 174px;
+      min-height: 174px;
       flex-wrap: wrap;
       // flex-direction: row-reverse;
     }
