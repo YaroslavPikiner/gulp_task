@@ -593,12 +593,13 @@ table {
 
 @media only screen and (max-width: 600px) {
   .wrapper {
-    max-width: 360px;
+    min-width: 360px;
   }
 
   .text__details {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 
   .details__range {
@@ -616,7 +617,7 @@ table {
 
   .cards__wrapper {
     flex-direction: column;
-    min-width: 300px;
+    width: 100%;
   }
 
   .cards__img--original {
@@ -628,6 +629,8 @@ table {
   .cards__item {
     height: 372px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   .cards__btn {
@@ -657,11 +660,14 @@ table {
     flex-wrap: nowrap;
     flex-direction: column;
     padding-top: 10px;
-    max-width: 280px;
+    width: 100%;
   }
 
   .cards__offers .offers {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .cards__offers .offers__wrapper {
@@ -671,21 +677,20 @@ table {
   }
 
   .cards__offers .offers__title {
-    max-width: 115px;
     padding-top: 0;
     margin-left: 10px;
   }
 
   .cards__offers .offers__item {
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
-    justify-content: start;
-    min-width: 280px;
+    justify-content: space-between;
     position: relative;
   }
 
   .cards__offers .offers__item>div {
-    width: 80%;
+    width: 100%;
     height: 1px;
     margin: 30px 0 10px 0;
     background-color: #e4e8f0;
@@ -697,7 +702,7 @@ table {
   }
 
   .cards__offers label {
-    margin-right: 25%;
+    margin-right: 32%;
   }
 
   .cards__offers .offers__price {
@@ -705,14 +710,6 @@ table {
   }
 
   .cards__offers .offers__price__item {
-    min-width: 80px;
     margin-bottom: 22px;
-  }
-
-  .cards__offers .offers__wrapper:after {
-    content: none;
-    width: 262px;
-    height: 5px;
-    background-color: #000;
   }
 }
