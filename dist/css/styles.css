@@ -32,8 +32,7 @@
 
 .cards__img--original {
   margin-top: -5px;
-  padding-right: 15px;
-  padding-left: 20px;
+  padding: 0 15px 0 10px;
 }
 
 .cards__text {
@@ -87,7 +86,7 @@
 }
 
 .cards__offers .offers__title {
-  font-size: 0.65rem;
+  font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   color: #7d8295;
@@ -110,6 +109,13 @@
 .cards__offers .offers__price__item {
   margin-right: 47px;
   width: 65px;
+}
+
+.cards__offers .offers__item__price {
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 70px;
+  margin: 10px 0 0 20px;
 }
 
 .text__details {
@@ -144,13 +150,6 @@
 
 .details__view>i {
   transform: rotate(-45deg);
-}
-
-.offers__item__price {
-  font-size: 14px;
-  font-weight: bold;
-  min-width: 70px;
-  margin: 10px 0 0 20px;
 }
 
 .header {
@@ -574,14 +573,15 @@ table {
 
   .cards .text__title {
     width: 100%;
+    font-size: 15px;
   }
 
   .cards__btn {
     order: -1;
+    margin: 0;
   }
 
   .cards__offers {
-    padding-top: 10px;
     display: flex;
     flex-basis: 100%;
     justify-content: center;
@@ -596,8 +596,10 @@ table {
   }
 
   .cards__offers .offers__title {
-    max-width: 82px;
+    max-width: 95px;
     padding-top: 0;
+    line-height: 1.45;
+    letter-spacing: 0.5px;
   }
 
   .cards__offers .offers__item {
@@ -631,24 +633,20 @@ table {
   .text__details {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .details__range {
-    margin-left: 10px;
+    margin-left: 5px;
   }
 
   .header__list {
     flex-wrap: wrap;
   }
 
-  .text__title {
-    font-size: 18px;
+  .cards .text__title {
+    font-size: 15px;
     line-height: 24px;
-  }
-
-  .cards {
-    min-width: 320px;
   }
 
   .cards__wrapper {
@@ -657,7 +655,7 @@ table {
   }
 
   .cards__img--original {
-    padding: 0 0 0 5px;
+    padding: 0 0 0 6px;
     width: 34px;
     height: 34px;
   }
@@ -710,12 +708,15 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   .cards__offers .offers__title {
     padding-top: 0;
-    margin-left: 10px;
-    min-width: 120px;
+    margin-left: 5px;
+    min-width: 140px;
+    line-height: 1.45;
+    letter-spacing: 0.5px;
     width: 100%;
   }
 
@@ -724,22 +725,12 @@ table {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e4e8f0;
-    padding: 10px 0;
+    padding: 12px 0;
     margin-right: 0;
   }
 
   .cards__offers .offers__item:nth-child(1) {
     border-top: 1px solid #e4e8f0;
-  }
-
-  .cards__offers input {
-    margin-right: 5px;
-  }
-
-  .cards__offers label {
-    margin-right: 29%;
-    font-size: 16px;
-    line-height: 20px;
   }
 
   .cards__offers .offers__price {
@@ -752,5 +743,15 @@ table {
 
   .cards__offers .offers__item__price {
     margin: 0;
+  }
+
+  .cards__offers input {
+    margin-right: 5px;
+  }
+
+  .cards__offers label {
+    margin-right: 29%;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
