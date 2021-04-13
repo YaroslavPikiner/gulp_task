@@ -8,46 +8,27 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="form">
-      <div class="form__wrapper">
-        <div class="form__title">
-          <p>Create new account</p>
+    <section class="form">
+      <form method="post" action="/" id="form" class="form__validate">
+        <div class="form__field">
+          <label for="full-name"></label>
+          <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" required />
+          <i></i>
         </div>
-        <form class="form__list" action="#">
-          <input type="text" />
+        <div class="form__field">
+          <label for="email-input"></label>
+          <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
+        </div>
+        <div class="form__field">
+          <label for="password-input"></label>
+          <input type="password" name="password-input" id="password-input" required />
+        </div>
+        <div class="form__field">
           <label for=""></label>
-
-          <input type="text" />
-          <label for=""></label>
-
-          <select name="" id="">
-            <option value="ukraine">ukraine</option>
-            <option value="ukraine">ukraine</option>
-            <option value="poland">poland</option>
-            <option value="georgia">georgia</option>
-            <option value="romania">romania</option>
-            <option value="usa">usa</option>
-            <option value="india">india</option>
-            <option value="singapur">singapur</option>
-            <option value="german">german</option>
-            <option value="mexico">mexico</option>
-          </select>
-
-          <div class="form__checkbox">
-            <input type="radio" />
-            <label for="">Male</label>
-            <input type="radio" />
-            <label for="">Female</label>
-
-            <input type="checkbox" />
-            <label for="">
-              Accept <a href="">Terms</a> and <a href="">conditions</a>
-            </label>
-          </div>
-          <button class="btn form__btn">Sign Up</button>
-        </form>
-      </div>
-    </div>
+          <input type="submit" value="Sign Up" />
+        </div>
+      </form>
+    </section>
 
     <script src="./js/index.js"></script>
   </body>
