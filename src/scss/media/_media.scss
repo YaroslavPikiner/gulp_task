@@ -119,6 +119,10 @@
       .offers__price__item {
         margin-bottom: 22px;
       }
+
+      .offers__item__price {
+        margin: 0;
+      }
     }
   }
 }
@@ -192,10 +196,16 @@
         width: 80px;
       }
 
-      // .offers__item__price {
-      //   min-width: 70px;
-      // }
+    
     }
+  }
+
+  .details__range {
+    font-size: 14px;
+  }
+
+  .details__view {
+    font-size: 14px;
   }
 
   .text__title {

@@ -144,7 +144,7 @@
   font-size: 14px;
   font-weight: bold;
   min-width: 70px;
-  margin-left: 20px;
+  margin: 10px 0 0 20px;
 }
 
 .header {
@@ -594,6 +594,14 @@ table {
     width: 80px;
   }
 
+  .details__range {
+    font-size: 14px;
+  }
+
+  .details__view {
+    font-size: 14px;
+  }
+
   .text__title {
     font-size: 16px;
     line-height: 24px;
@@ -721,5 +729,9 @@ table {
 
   .cards__offers .offers__price__item {
     margin-bottom: 22px;
+  }
+
+  .cards__offers .offers__item__price {
+    margin: 0;
   }
 }
