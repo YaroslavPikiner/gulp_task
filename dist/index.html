@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="form">
-      <form method="post" action="/" id="form" class="form__validate">
-        <p class="form__title">Create new account</p>
-        <div class="form__field">
-          <label for="full-name"></label>
-          <input
-            type="text"
-            name="full-name"
-            id="full-name"
-            placeholder="Joe Bloggs"
-            required
-          />
-          <i></i>
-        </div>
-        <div class="form__field">
-          <label for="password-input"></label>
-          <input
-            type="password"
-            name="password-input"
-            id="password-input"
-            required
-          />
-        </div>
-        <div class="form__field">
-          <p>
-            <select name="country">
-              <option value="ukraine">Ukraine</option>
-              <option value="spain">Spain</option>
-              <option value="usa">Usa</option>
-              <option value="nipal">Nipal</option>
-              <option value="egypt">Egypt</option>
-              <option value="rome">Rome</option>
-              <option value="canada">Canada</option>
-              <option value="india">India</option>
-              <option value="russia">Russia</option>
-              <option value="china">China</option>
-            </select>
-          </p>
-        </div>
-        <div class="form__field">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="form">
+    <form method="post" action="/" id="form" class="form__validate">
+      <p class="form__title">Create new account</p>
+      <div class="form__field">
+        <label for="full-name"></label>
+        <i class="fa fa-envelope icon"></i>
+        <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" required pattern="[a-z]"  />
+        <div class="form__error--message">*Name is a required field.</div>
+
+      </div>
+      <div class="form__field">
+        <label for="password-input"></label>
+        <i class="fa fa-key icon"></i>
+        <i  onclick="tooglePassword()" class="fa fa-eye icon"></i>
+        <input type="password" name="password-input" id="password-input" required />
+        <div class="form__error--message">*Password is a required field.</div>
+      </div>
+      </div>
+      <div class="form__field">
+        <p>
+          <select id='country-select' name="country">
+            <option value="ukraine">Ukraine</option>
+            <option value="spain">Spain</option>
+            <option value="usa">Usa</option>
+            <option value="nipal">Nipal</option>
+            <option value="egypt">Egypt</option>
+            <option value="rome">Rome</option>
+            <option value="canada">Canada</option>
+            <option value="india">India</option>
+            <option value="russia">Russia</option>
+            <option value="china">China</option>
+          </select>
+        </p>
+        <div class="form__error--message">*Choose your country.</div>
+
+      </div>
+      <div class="form__field">
+        <span>
           <input type="radio" name="male-input" id="male-input" required />
           <label for="male-input">Male</label>
+        </span>
 
+        <span>
           <input type="radio" name="female-input" id="female-input" required />
           <label for="female-input">Female</label>
-        </div>
-        <div class="form__field">
+        </span>
+      </div>
+      <div class="form__field">
+        <span>
           <input type="checkbox" name="terms" id="terms" required />
-          <label for="terms"
-            >Accept <a href="#">terms</a> and <a href="#">conditions</a></label
-          >
-        </div>
-        <div class="form__field">
-          <label for=""></label>
-          <input type="submit" value="Sign Up" />
-        </div>
-      </form>
-    </section>
+          <label for="terms">Accept <a href="#">terms</a> and
+            <a href="#">conditions</a></label>
+        </span>
+      </div>
+      <button class="btn form__btn" type="submit">Sign Up</button>
+    </form>
+  </section>
 
-    <script src="./js/index.js"></script>
-  </body>
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

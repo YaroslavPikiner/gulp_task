@@ -1,2 +1,1 @@
-/* eslint-disable */ 
-function hello(o){console.log(`hello ${o}`)}function from(o){console.log(`hello ${o}`)}hello("1"),from("2");
+const tooglePassword=()=>{const t=document.querySelector("#password-input");"password"===t.type?t.type="text":t.type="password"};
