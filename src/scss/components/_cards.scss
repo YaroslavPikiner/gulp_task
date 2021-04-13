@@ -1,10 +1,13 @@
 .wrapper {
   display: flex;
-  justify-content: center;
+    max-width: 1336px;
+    justify-content: center;
+
 }
 
 .cards {
   margin: 20px;
+  width: 100%;
 
   &__list {
     display: flex;
@@ -15,8 +18,9 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
-    padding: 40px;
-    height: 136px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 136px;
     border: solid 2px #e4e8f0;
     margin-bottom: 20px;
     font-family: "Montserrat", sans-serif;
@@ -34,7 +38,7 @@
   }
 
   &__text {
-    max-width: 350px;
+    max-width: 365px;
   }
 
   &__view__btn {
@@ -120,12 +124,12 @@
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 26px;
-  padding: 5px 5px 10px 5px;
+  padding: 0 5px 10px 5px;
   color: #262e4f;
 }
 
 .details__range {
-  margin-right: 20px;
+  margin: 0 20px 0 5px;
   color: #9296a6;
 }
 
