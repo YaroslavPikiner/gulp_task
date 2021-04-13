@@ -6,14 +6,12 @@ const ValidateForm = (function() {
   return {
     tooglePassword: function() {
         if(inputPassword.type === 'password') {
-          inputPassword.type = 'text' ;
-        }else {
-          inputPassword.type = 'password'
+          inputPassword.type = 'text' 
         }
-        
-    },
-    validate: function() {
+        inputPassword.type = 'password'
     }
-  };
+  }
+})
 
-})();
+
+document.querySelector('.fa-eye').addEventListener('click', ValidateForm.tooglePassword());

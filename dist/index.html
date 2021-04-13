@@ -17,14 +17,14 @@
       <div class="form__field">
         <label for="full-name"></label>
         <i class="fa fa-envelope icon"></i>
-        <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" required pattern="[a-z]"  />
+        <input type="text" name="full-name" id="full-name" placeholder="Name" required />
         <div class="form__error--message">*Name is a required field.</div>
 
       </div>
       <div class="form__field">
         <label for="password-input"></label>
         <i class="fa fa-key icon"></i>
-        <i  onclick="tooglePassword()" class="fa fa-eye icon"></i>
+        <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
         <input type="password" name="password-input" id="password-input" required />
         <div class="form__error--message">*Password is a required field.</div>
       </div>
