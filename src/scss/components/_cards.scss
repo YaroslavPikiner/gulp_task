@@ -1,8 +1,7 @@
 .wrapper {
   display: flex;
-    max-width: 1336px;
-    justify-content: center;
-
+  max-width: 1336px;
+  justify-content: center;
 }
 
 .cards {
@@ -18,7 +17,7 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
-    padding: 20px;
+    padding: 25px 20px 20px 20px;
     box-sizing: border-box;
     max-height: 136px;
     border: solid 2px #e4e8f0;
@@ -32,8 +31,9 @@
 
   &__img {
     &--original {
-      margin-top: -10px;
+      margin-top: -5px;
       padding-right: 15px;
+      padding-left: 20px;
     }
   }
 
@@ -103,7 +103,6 @@
       margin-bottom: 10px;
     }
 
-
     .offers__item > span {
       width: 100%;
     }
@@ -118,10 +117,12 @@
 .text__details {
   display: flex;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .text__title {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 900;
   line-height: 26px;
   padding: 0 5px 10px 5px;
