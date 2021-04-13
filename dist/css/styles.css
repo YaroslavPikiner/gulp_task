@@ -1,3 +1,8 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   margin: 20px;
 }
@@ -15,7 +20,7 @@
   height: 136px;
   border: solid 2px #e4e8f0;
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cards__wrapper {
@@ -615,6 +620,10 @@ table {
     line-height: 24px;
   }
 
+  .cards {
+    max-width: 320px;
+  }
+
   .cards__wrapper {
     flex-direction: column;
     width: 100%;
@@ -627,7 +636,7 @@ table {
   }
 
   .cards__item {
-    height: auto;
+    height: 372px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -701,7 +710,7 @@ table {
   }
 
   .cards__offers label {
-    margin-right: 30%;
+    margin-right: 29%;
     font-size: 16px;
     line-height: 20px;
   }

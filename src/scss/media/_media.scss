@@ -1,7 +1,4 @@
 @media only screen and (max-width: 600px) {
-  .wrapper {
-  }
-
   .text__details {
     font-size: 14px;
     line-height: 20px;
@@ -24,6 +21,8 @@
   }
 
   .cards {
+    max-width: 320px;
+
     &__wrapper {
       flex-direction: column;
       width: 100%;
@@ -36,7 +35,7 @@
     }
 
     &__item {
-      height: auto;
+      height: 372px;
       padding: 20px;
       display: flex;
       justify-content: center;
@@ -108,7 +107,7 @@
       }
 
       label {
-        margin-right: 30%;
+        margin-right: 29%;
         font-size: 16px;
         line-height: 20px;
       }

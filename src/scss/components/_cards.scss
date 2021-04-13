@@ -1,3 +1,8 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   margin: 20px;
 
@@ -14,7 +19,7 @@
     height: 136px;
     border: solid 2px #e4e8f0;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
   &__wrapper {
@@ -136,7 +141,6 @@
 .details__view > i {
   transform: rotate(-45deg);
 }
-
 
 .offers__item__price {
   font-size: 14px;
