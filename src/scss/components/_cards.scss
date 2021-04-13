@@ -61,6 +61,7 @@
 
   &__offers {
     flex-basis: 47%;
+    padding-top: 10px;
     .offers {
       display: flex;
       flex-direction: row;
@@ -89,9 +90,12 @@
     }
 
     .offers__item > input {
-      border: solid 2px #e4e8f0;
       background-color: #ffffff;
       margin-bottom: 10px;
+    }
+
+    .offers__item > span {
+      width: 100%;
     }
 
     .offers__price__item {
