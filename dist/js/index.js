@@ -6,6 +6,9 @@ const ValidateForm = (function () {
   const errName = document.querySelector('.form__error--name');
   const errPass = document.querySelector('.form__error--password');
   const errCountry = document.querySelector('.form__error--country');
+  const termCheckbox = document.getElementById('terms');
+  let formBtn = document.querySelector('.form__btn');
+  formBtn.setAttribute('disabled','true');
 
   return {
     tooglePassword: function () {
@@ -53,5 +56,9 @@ const ValidateForm = (function () {
       document.querySelector('.form__error--password').style.display = 'none';
       return true;
     },
+
+    btnCheck: function() {
+      termCheckbox.checked ? formBtn.removeAttribute('disabled') : formBtn.setAttribute('disabled', 'true')
+    }
   };
 })();

@@ -47,6 +47,8 @@ html {
 .form__field>span>label {
   font-size: 12px;
   margin-right: 18px;
+  font-weight: 500;
+  color: #000;
 }
 
 .form__field>span>input[type="checkbox"] {

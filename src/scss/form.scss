@@ -4,12 +4,16 @@ html {
   background-color: #102250;
 }
 
+
+
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
+
+
 
   &__validate {
     width: 356px;
@@ -44,6 +48,8 @@ html {
   &__field > span > label {
     font-size: 12px;
     margin-right: 18px;
+    font-weight: 500;
+    color: #000;
   }
  
   &__field > span > input[type="checkbox"] {
