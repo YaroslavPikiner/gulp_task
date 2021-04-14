@@ -1,3 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+html {
+  background-color: #102250;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 16px;
+}
+
+.form__validate {
+  width: 356px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.form__title {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 600;
+  font-family: 'Roboto', 'sans-serif';
+  margin-bottom: 55px;
+}
+
+.form__field {
+  margin-bottom: 35px;
+}
+
+.form__select {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  padding-left: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: #f5f8fa !important;
+  border: 1px solid #dbe0e4;
+  color: #babcbe;
+  background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png) 96% 53% no-repeat;
+  background-size: 4%;
+}
+
+.form__name,
+.form__password {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #f5f8fa;
+  border: 1px solid #dbe0e4;
+  outline: none;
+  padding-left: 40px;
+}
+
+.form__field>span>label {
+  font-size: 12px;
+  margin-right: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.form__field>span>input[type='checkbox'] {
+  appearance: none;
+  background-color: #f5f8fa;
+  border: 1px solid #dbe0e4;
+  padding: 6px;
+  border-radius: 3px;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  margin-bottom: -2px;
+}
+
+.form__field>span>input[type='checkbox']:checked {
+  background-color: #f5f8fa;
+  border: 1px solid #2290df;
+}
+
+.form__field>span>input[type='checkbox']:checked:after {
+  content: '✓';
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  left: 1px;
+  color: #2290df;
+  margin-top: 5px;
+}
+
+.form__field i {
+  color: #babcbe;
+  position: absolute;
+  padding: 15px 0 0 15px;
+}
+
+.form__field>.fa-eye {
+  position: absolute;
+  margin-left: -45px;
+}
+
+.form__field .fa-eye:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.form__field>span>label>a {
+  color: #2290df;
+  text-decoration: none;
+}
+
+.form__error {
+  border: 1px solid #cc0033 !important;
+}
+
+.form__error--password,
+.form__error--name,
+.form__error--country {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+  display: none;
+}
+
+.form__btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #f5f8fa;
+  outline: none;
+  border: 1px solid #0000000c;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-bottom: 31px;
+}
+
+.form__btn:hover {
+  background-color: #2290df;
+  color: #f5f8fa;
+  cursor: pointer;
+
 .wrapper {
   display: flex;
   max-width: 1336px;

@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const minifyJs = require('gulp-uglify');
+// const minifyJs = require('gulp-uglify');
 const prettier = require('gulp-prettier');
 const eslint = require('gulp-eslint');
 const gcmq = require('gulp-group-css-media-queries');
@@ -37,7 +37,7 @@ function compress() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
-    .pipe(minifyJs())
+    // .pipe(minifyJs())
     .pipe(gulp.dest('./dist/js'));
 }
 
