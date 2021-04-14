@@ -1,3 +1,17 @@
-body {
-    background-color: rgba(126, 51, 51, 0.356);
-}
+@import './components/cards';
+@import './components/header';
+
+@import './media/media';
+
+@import './resources/vars';
+@import './resources/typography';
+@import './resources/styles';
+@import './resources/normalize';
+@import './resources/mixins';
+@import './resources/color-matrix';
+@import './resources/reset';
+
+.wrapper {
+    margin: 127px auto;
+    max-width: 1338px;
+  }

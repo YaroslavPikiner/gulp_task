@@ -1,0 +1,48 @@
+.header {
+  margin-bottom: 40px;
+
+  &__body {
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__item:not(:last-child):after {
+    content: '\01F86A';
+    width: 16px;
+    height: 16px;
+    color: #262e4f;
+    margin: 0 20px;
+  }
+
+  &__item {
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: all 0.2s;
+    color: #262e4f;
+    &--disabled {
+      color: #d4d5dc;
+    }
+  }
+
+  &__item:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__item > i {
+    padding: 0 20px;
+  }
+}
+
+li > i {
+  pointer-events: none;
+}

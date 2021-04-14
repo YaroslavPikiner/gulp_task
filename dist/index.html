@@ -1,15 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
-<body>  
-    <h1>hello</h1>
-    
-    <script src="./js/index.js"></script>
+
+<body>
+  <main class="wrapper">
+    <!-- <div class="header">
+      <div class="header__body">
+        <ul class="header__list">
+          <li class="header__item">My Cart </li>
+          <li class="header__item">Choose Lab </li>
+          <li class="header__item header__item--disabled">Rentals Return </li>
+          <li class="header__item header__item--disabled">Checkout </li>
+          <li class="header__item header__item--disabled">Order Placed</li>
+        </ul>
+      </div>
+    </div> -->
+    <div class="cards">
+      <div class="cards__body">
+        <div class="cards__list">
+          <div class="cards__item">
+            <div class="cards__wrapper">
+              <picture class="cards__img">
+                <source media="(min-width:768px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <source media="(min-width:360px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <img class="cards__img--original"
+                  src="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg"
+                  alt="Flowers" style="width:auto;">
+              </picture>
+              <div class="cards__text">
+                <p class="text__title">Plymouth Meeting, Pennsylvania Testing Laboratory</p>
+                <div class="text__details">
+                  <p class="details__range">78 miles</p>
+                  <p class="details__view">View Details <i class="fa fa-arrow-right"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="cards__offers">
+              <p class="offers__title">Turn Around Time:</p>
+              <div class="offers__wrapper">
+                <ul class="offers">
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one__day" name="duration" value="one__day">
+                      <label for="one__day"> 1 Day </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="second_day" name="duration" value="second_day">
+                      <label for="second_day"> 2 Days </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one_week" name="duration" value="one_week">
+                      <label for="one_week"> 1 Week </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn cards__view__btn">View More</button>
+            <button type="button" class="btn cards__btn"><i class="fa fa-arrow-down"></i></button>
+          </div>
+          <div class="cards__item">
+            <div class="cards__wrapper">
+              <picture class="cards__img">
+                <source media="(min-width:768px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <source media="(min-width:360px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <img class="cards__img--original"
+                  src="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg"
+                  alt="Flowers" style="width:auto;">
+              </picture>
+              <div class="cards__text">
+                <p class="text__title">Plymouth Meeting, Pennsylvania Testing Laboratory</p>
+                <div class="text__details">
+                  <p class="details__range">78 miles</p>
+                  <p class="details__view">View Details <i class="fa fa-arrow-right"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="cards__offers">
+              <p class="offers__title">Turn Around Time:</p>
+              <div class="offers__wrapper">
+                <ul class="offers">
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one__day" name="duration" value="one__day">
+                      <label for="one__day"> 1 Day </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="second_day" name="duration" value="second_day">
+                      <label for="second_day"> 2 Days </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one_week" name="duration" value="one_week">
+                      <label for="one_week"> 1 Week </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn cards__view__btn">View More</button>
+            <button type="button" class="btn cards__btn"><i class="fa fa-arrow-down"></i></button>
+          </div>
+          <div class="cards__item">
+            <div class="cards__wrapper">
+              <picture class="cards__img">
+                <source media="(min-width:768px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <source media="(min-width:360px)"
+                  srcset="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg">
+                <img class="cards__img--original"
+                  src="https://cdn.zeplin.io/5d73f18e8919b56be914f9fd/assets/046F9018-BC54-4275-8B2A-C60090A7D929.svg"
+                  alt="Flowers" style="width:auto;">
+              </picture>
+              <div class="cards__text">
+                <p class="text__title">Plymouth Meeting, Pennsylvania Testing Laboratory</p>
+                <div class="text__details">
+                  <p class="details__range">78 miles</p>
+                  <p class="details__view">View Details <i class="fa fa-arrow-right"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="cards__offers">
+              <p class="offers__title">Turn Around Time:</p>
+              <div class="offers__wrapper">
+                <ul class="offers">
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one__day" name="duration" value="one__day">
+                      <label for="one__day"> 1 Day </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="second_day" name="duration" value="second_day">
+                      <label for="second_day"> 2 Days </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                  <li class="offers__item">
+                    <span>
+                      <input type="radio" id="one_week" name="duration" value="one_week">
+                      <label for="one_week"> 1 Week </label>
+                    </span>
+                    <p class="offers__item__price" for="#">$ 1200.00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn cards__view__btn">View More</button>
+            <button type="button" class="btn cards__btn"><i class="fa fa-arrow-down"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
