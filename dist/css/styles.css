@@ -1,15 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-html {
-  background-color: #102250;
-}
-
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', 'sans-serif';
   font-size: 16px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #102250;
 }
 
 .form__validate {
@@ -146,6 +145,7 @@ html {
   background-color: #2290df;
   color: #f5f8fa;
   cursor: pointer;
+}
 
 .wrapper {
   display: flex;
