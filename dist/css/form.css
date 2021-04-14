@@ -88,6 +88,7 @@ html {
 
 .form__field .fa-eye:hover {
   cursor: pointer;
+  color: #000;
 }
 
 .form__error {
