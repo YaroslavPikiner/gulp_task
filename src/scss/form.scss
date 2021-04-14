@@ -10,10 +10,9 @@ html {
   align-items: center;
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
-  height: 600px;
 
   &__validate {
-    width: 400px;
+    width: 356px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -21,53 +20,46 @@ html {
 
   &__title {
     text-align: center;
-    font-size: 20px;
+    font-size: 29px;
+    font-weight: 600;
     font-family: "Roboto", "sans-serif";
+    margin-bottom: 55px;
   }
 
   &__field {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
-  &__field > input {
+  &__name, &__password, &__select {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 350px;
     height: 45px;
     border-radius: 10px;
-    background-color: #f5f8fa;
+    background-color: #F5F8FA;
+    border: 1px solid #DBE0E4;
     outline: none;
-    border: 1px solid #0000000c;
-    padding-left: 50px;
+    padding-left: 40px;
   }
 
-  &__field > p > select {
-    width: 100%;
-    max-width: 420px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: #f5f8fa;
-    outline: none;
-    border: 1px solid #0000000c;
-    padding-left: 50px;
+  &__field > span > label {
+    font-size: 12px;
+    margin-right: 18px;
   }
-
+ 
   &__field > span > input[type="checkbox"] {
-    -webkit-appearance: none;
-    background-color: #fff;
+    background-color: #F5F8FA;
     border: 1px solid black;
     padding: 6px;
     border-radius: 3px;
     display: inline-block;
-    position: relative;
     outline: none;
-    margin-top: 5px;
+    position: relative;
+    margin-bottom: 20px;
   }
 
   &__field > span > input[type="checkbox"]:checked {
-    background-color: #fff;
+    background-color: #F5F8FA;
     border: 1px solid #2290df;
-    color: #99a1a7;
-    margin: 2px 0 0 0;
   }
 
   &__field > span > input[type="checkbox"]:checked:after {
@@ -82,20 +74,17 @@ html {
 
   &__field i {
     position: absolute;
-    margin: 15px 0 0 14px;
-    color: #babbce;
+    padding: 15px 0 0 15px;
   }
 
-  &__field i:nth-child(3) {
+  &__field > .fa-eye {
     position: absolute;
-    margin: 15px 0 0 370px;
-    text-align: right;
-    color: #babbce;
+    margin-left: -40px;
   }
 
-  &__field i:nth-child(3):hover {
+  &__field  i:nth-child(3):hover {
     cursor: pointer;
-    color: #000;
+ 
   }
 
   &__error {
@@ -121,6 +110,7 @@ html {
     font-size: 16px;
     font-weight: 500;
     transition: all 0.2s;
+    margin-bottom: 31px;
   }
 
   &__btn:hover {
