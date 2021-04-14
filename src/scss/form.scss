@@ -102,7 +102,7 @@ html {
     border: 1px solid #cc0033 !important;
   }
 
-  &__error--message {
+  &__error--password, &__error--name, &__error--country {
     color: #cc0033;
     display: inline-block;
     font-size: 12px;
