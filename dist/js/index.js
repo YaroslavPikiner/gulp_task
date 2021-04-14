@@ -19,8 +19,8 @@ const ValidateForm = (function () {
       }
     },
     validate: function () {
-      const passRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
-      const nameRegExp = /^[a-zA-Z]{3,}$/;
+      const passRegExp = /^(?=.*\d)(?=.*[a-z])[0-9a-z!@#$%^&*]{4,}$/;
+      const nameRegExp = /^[0-9a-zA-Z  ]{1,}$/;
 
       const passResult = passRegExp.test(inputPassword.value);
       const nameResult = nameRegExp.test(inputName.value);
