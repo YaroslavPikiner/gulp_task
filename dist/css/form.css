@@ -76,6 +76,7 @@ html {
 }
 
 .form__field i {
+  color: #BABCBE;
   position: absolute;
   padding: 15px 0 0 15px;
 }
@@ -85,7 +86,7 @@ html {
   margin-left: -40px;
 }
 
-.form__field i:nth-child(3):hover {
+.form__field .fa-eye:hover {
   cursor: pointer;
 }
 

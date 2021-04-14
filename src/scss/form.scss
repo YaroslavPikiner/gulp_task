@@ -73,6 +73,7 @@ html {
   }
 
   &__field i {
+    color: #BABCBE;
     position: absolute;
     padding: 15px 0 0 15px;
   }
@@ -82,7 +83,7 @@ html {
     margin-left: -40px;
   }
 
-  &__field  i:nth-child(3):hover {
+  &__field  .fa-eye:hover {
     cursor: pointer;
  
   }
