@@ -12,26 +12,28 @@
 
 <body>
   <section class="form">
-    <form method="post" name='myform' action="" id="form" class="form__validate" onsubmit="return ValidateForm.validate()">
+    <form method="post" name='myform' action="" id="form" class="form__validate"
+      onsubmit="return ValidateForm.validate(event)">
       <p class="form__title">Create a new account</p>
       <div class="form__field">
         <label for="full-name"></label>
         <i class="fa fa-envelope icon"></i>
-        <input class="form__name" type="text" name="full-name" id="full-name" placeholder="Name"  />
+        <input onchange="ValidateForm.validateName()" class="form__name" type="text" name="full-name" id="full-name"
+          placeholder="Name" />
         <div class="form__error--name"></div>
-
       </div>
       <div class="form__field">
         <label for="password-input"></label>
         <i class="fa fa-lock icon"></i>
-        <input type="password" class="form__password" name="password-input" id="password-input" />
+        <input onchange="ValidateForm.validatePassword()" type="password" class="form__password" name="password-input"
+          id="password-input" />
         <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
         <div class="form__error--password"></div>
       </div>
       </div>
       <div class="form__field">
         <p>
-          <select class="form__select" id='country-select' name="country">
+          <select onchange="ValidateForm.validateCountry()" class="form__select" id='country-select' name="country">
             <option value="ukraine">Ukraine</option>
             <option value="spain">Spain</option>
             <option value="usa">Usa</option>
@@ -45,7 +47,6 @@
           </select>
         </p>
         <div class="form__error--country"></div>
-
       </div>
       <div class="form__field">
         <span>
@@ -57,7 +58,7 @@
       </div>
       <div class="form__field">
         <span>
-          <input onchange="ValidateForm.btnCheck()" type="checkbox" name="terms" id="terms"  />
+          <input onchange="ValidateForm.btnCheck()" type="checkbox" name="terms" id="terms" />
           <label for="terms">Accept <a href="#">terms</a> and
             <a href="#">conditions</a></label>
         </span>
