@@ -13,24 +13,38 @@ const ValidateForm = (function () {
   formBtn.setAttribute('disabled', 'true');
 
   return {
-
     validate: function (e) {
       e.preventDefault();
-      console.log(this.validateName(),  this.validatePassword(), this.validateCountry());
-      if(this.validateName() && this.validatePassword && this.validateCountry()) {
-        console.log('Logged')
+      console.log(
+        this.validateName(),
+        this.validatePassword(),
+        this.validateCountry()
+      );
+      if (
+        this.validateName() &&
+        this.validatePassword &&
+        this.validateCountry()
+      ) {
+        console.log('Logged');
       } else {
-        console.log('Not autorized')
+        console.log('Not autorized');
       }
       return true;
     },
-  
-
- 
 
     validateName: function () {
       const nameRegExp = /^[0-9a-zA-Zа-яА-Я^\s ]{1,}$/;
+      const chars = '~`@!#$%^&*+=[]\\\';,/{}|":<>?';
       const nameResult = nameRegExp.test(inputName.value);
+
+      for (let i = 0; i < inputName.value.length; i++) {
+        if (chars.indexOf(inputName.value.charAt(i)) != -1) {
+            inputName.classList.add('form__error');
+            errName.style.display = 'block';
+            errName.innerHTML = `<p> *Special charactersnot allowed </p>`;
+            return false;
+        }
+      }
 
       if (!nameResult) {
         inputName.classList.add('form__error');
@@ -38,7 +52,7 @@ const ValidateForm = (function () {
         errName.innerHTML = `<p> *Name is required fields </p>`;
         return false;
       }
-      if(inputName.value.trim() === '') {
+      if (inputName.value.trim() === '') {
         inputName.classList.add('form__error');
         errName.style.display = 'block';
         errName.innerHTML = `<p>*Only space not allowed</p>`;
@@ -53,17 +67,17 @@ const ValidateForm = (function () {
       const passRegExp = /^[0-9a-zA-Zа-яА-Я]{4,}$/;
       const passResult = passRegExp.test(inputPassword.value);
 
-      if(inputPassword.value.trim() === '') {
-        inputPassword.classList.add('form__error');
-        errPass.style.display = 'block';
-        errPass.innerHTML = `<p>*Only space not allowed</p>`;
-        return false;
-      }
-
-      if(inputPassword.value.length <= 3) {
+      if (inputPassword.value.length <= 3) {
         inputPassword.classList.add('form__error');
         errPass.style.display = 'block';
         errPass.innerHTML = `<p>*Password must be min 4 characters</p>`;
+        return false;
+      }
+
+      if (inputPassword.value.trim() === '') {
+        inputPassword.classList.add('form__error');
+        errPass.style.display = 'block';
+        errPass.innerHTML = `<p>*Only space not allowed</p>`;
         return false;
       }
 
@@ -72,15 +86,14 @@ const ValidateForm = (function () {
         errPass.style.display = 'block';
         errPass.innerHTML = `<p>*Password is required fields</p>`;
         return false;
-      } 
+      }
 
-      
       errPass.style.display = 'none';
       inputPassword.classList.remove('form__error');
       return true;
     },
 
-    validateCountry: function() {
+    validateCountry: function () {
       if (!inputCountry.value) {
         inputCountry.classList.add('form__error');
         errCountry.style.display = 'block';
@@ -98,7 +111,7 @@ const ValidateForm = (function () {
         : formBtn.setAttribute('disabled', 'true');
     },
 
-      tooglePassword: function () {
+    tooglePassword: function () {
       if (inputPassword.type === 'password') {
         inputPassword.type = 'text';
       } else {
