@@ -29,7 +29,7 @@ const ValidateForm = (function () {
  
 
     validateName: function () {
-      const nameRegExp = /^[0-9a-zA-Z^\s ]{1,}$/;
+      const nameRegExp = /^[0-9a-zA-Zа-яА-Я^\s ]{1,}$/;
       const nameResult = nameRegExp.test(inputName.value);
 
       if (!nameResult) {
@@ -39,7 +39,7 @@ const ValidateForm = (function () {
         return false;
       }
       if(inputName.value.trim() === '') {
-        inputPassword.classList.add('form__error');
+        inputName.classList.add('form__error');
         errName.style.display = 'block';
         errName.innerHTML = `<p>*Only space not allowed</p>`;
         return false;
@@ -50,8 +50,23 @@ const ValidateForm = (function () {
     },
 
     validatePassword: function () {
-      const passRegExp = /^[0-9a-zA-Z]{4,}$/;
+      const passRegExp = /^[0-9a-zA-Zа-яА-Я]{4,}$/;
       const passResult = passRegExp.test(inputPassword.value);
+
+      if(inputPassword.value.trim() === '') {
+        inputPassword.classList.add('form__error');
+        errPass.style.display = 'block';
+        errPass.innerHTML = `<p>*Only space not allowed</p>`;
+        return false;
+      }
+
+      if(inputPassword.value.length <= 3) {
+        inputPassword.classList.add('form__error');
+        errPass.style.display = 'block';
+        errPass.innerHTML = `<p>*Password must be min 4 characters</p>`;
+        return false;
+      }
+
       if (!passResult) {
         inputPassword.classList.add('form__error');
         errPass.style.display = 'block';
@@ -59,12 +74,7 @@ const ValidateForm = (function () {
         return false;
       } 
 
-      if(inputPassword.value.length <= 3) {
-        inputPassword.classList.add('form__error');
-        errPass.style.display = 'block';
-        errPass.innerHTML = `<p>*Min 4 letters</p>`;
-        return false;
-      }
+      
       errPass.style.display = 'none';
       inputPassword.classList.remove('form__error');
       return true;
