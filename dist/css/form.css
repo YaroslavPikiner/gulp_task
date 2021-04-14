@@ -91,6 +91,11 @@ html {
   color: #000;
 }
 
+.form__field>span>label>a {
+  color: #2290df;
+  text-decoration: none;
+}
+
 .form__error {
   border: 1px solid #cc0033 !important;
 }

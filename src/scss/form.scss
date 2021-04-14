@@ -86,7 +86,11 @@ html {
   &__field  .fa-eye:hover {
     cursor: pointer;
     color: #000;
- 
+  }
+
+  &__field > span > label > a {
+    color: #2290df;
+    text-decoration: none;
   }
 
   &__error {
