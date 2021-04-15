@@ -6,14 +6,15 @@
   align-items: center;
   font-family: 'Roboto', 'sans-serif';
   font-size: 16px;
-  margin-bottom: 40px;
   padding: 20px;
   background-color: #102250;
 
 
   &__validate {
-    width: 356px;
-    padding: 20px;
+    width: 100%;
+    max-width: 356px;
+    min-height: 530px;
+    padding: 50px 20px 20px 20px;
     background-color: #fff;
     border-radius: 5px;
   }
@@ -23,7 +24,7 @@
     font-size: 29px;
     font-weight: 600;
     font-family: 'Roboto', 'sans-serif';
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   &__field {
@@ -138,7 +139,6 @@
     font-size: 16px;
     font-weight: 500;
     transition: all 0.2s;
-    margin-bottom: 31px;
   }
 
   &__btn:hover {
