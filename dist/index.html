@@ -30,7 +30,7 @@
         <label for="password-input"></label>
         <i class="fa fa-lock icon"></i>
         <input onchange="ValidateForm.validatePassword()" type="password" class="form__password" name="password-input"
-          id="password-input" placeholder="Password"/>
+          id="password-input" placeholder="Password" onkeyup="this.value=this.value.replace(/\s+/gi,'')"/>
         <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
         <div class="form__error--password"></div>
       </div>

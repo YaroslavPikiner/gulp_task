@@ -66,20 +66,13 @@ const ValidateForm = (function () {
     },
 
     validatePassword: function () {
-      const passSpaceRegExp = /^((?!\s{1}).)*$/;
-      const passSpecialSymbols = /^[^!@#$%^&*()_]{0,1}/;
-      const passSpaceRes = passSpaceRegExp.test(inputPassword.value);
+      const passSpecialSymbols = /^[^!@#$%^&*()_]{1,}/;
       const passSpecialSymbolsRes = passSpecialSymbols.test(inputPassword.value);
 
       if (inputPassword.value.length <= 3) {
         this.errorMsg( inputPassword, errPass,
           `<p>Password must be min 4 letters</p>`
         );
-        return false;
-      }
-
-      if (!passSpaceRes) {
-        this.errorMsg(inputPassword, errPass, `<p>No space</p>`);
         return false;
       }
 
