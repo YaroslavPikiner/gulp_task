@@ -38,12 +38,12 @@ const ValidateForm = (function () {
       const nameResult = nameRegExp.test(inputName.value);
 
       if (!nameResult) {
-        this.errorMsg(inputName, errName, `<p> *Name is required fields </p>`);
+        this.errorMsg(inputName, errName, `<p>Name is required fields</p>`);
         return false;
       }
 
       if (inputName.value.trim() === '') {
-        this.errorMsg(inputName, errName, `<p>*Only space not allowed</p>`);
+        this.errorMsg(inputName, errName, `<p>Only space not allowed</p>`);
         return false;
       }
 
@@ -56,7 +56,7 @@ const ValidateForm = (function () {
       const passResult = passRegExp.test(inputPassword.value);
 
       if (inputPassword.value.trim() === '') {
-        this.errorMsg(inputPassword, errPass, `<p>*Only space not allowed</p>`);
+        this.errorMsg(inputPassword, errPass, `<p>Only space not allowed</p>`);
         return false;
       }
 
@@ -64,7 +64,7 @@ const ValidateForm = (function () {
         this.errorMsg(
           inputPassword,
           errPass,
-          `<p>*Password must be min 4 characters</p>`
+          `<p>Password must be min 4 characters</p>`
         );
         return false;
       }
@@ -73,7 +73,7 @@ const ValidateForm = (function () {
         this.errorMsg(
           inputPassword,
           errPass,
-          `<p>*Password must be min letters and numbers</p>`
+          `<p>Password must be min letters and numbers</p>`
         );
         return false;
       }
@@ -84,7 +84,7 @@ const ValidateForm = (function () {
 
     validateCountry: function () {
       if (!inputCountry.value) {
-        this.errorMsg(inputCountry, errCountry, `<p>*Chose your country</p>`);
+        this.errorMsg(inputCountry, errCountry, `<p>Chose your country</p>`);
         return false;
       }
 

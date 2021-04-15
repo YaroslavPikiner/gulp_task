@@ -13,26 +13,26 @@
 .form__validate {
   width: 100%;
   max-width: 356px;
-  min-height: 530px;
+  min-height: 520px;
   padding: 50px 20px 20px 20px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .form__title {
   text-align: center;
-  font-size: 29px;
+  font-size: 28px;
   font-weight: 600;
   font-family: 'Roboto', 'sans-serif';
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .form__field {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .form__field:nth-child(6) {
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
 
 .form__select {
@@ -47,8 +47,8 @@
   background-color: #f5f8fa !important;
   border: 1px solid #dbe0e4;
   color: #babcbe;
-  background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png) 96% 53% no-repeat;
-  background-size: 4%;
+  background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png) 95.5% 56% no-repeat;
+  background-size: 2%;
 }
 
 .form__name,
