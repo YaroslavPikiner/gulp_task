@@ -66,7 +66,7 @@ const ValidateForm = (function () {
     },
 
     validatePassword: function () {
-      const passSpaceRegExp = /^((?!\s{0}).)*$/;
+      const passSpaceRegExp = /^((?!\s{1}).)*$/;
       const passSpecialSymbols = /^[^!@#$%^&*()_]{0,1}/;
       const passSpaceRes = passSpaceRegExp.test(inputPassword.value);
       const passSpecialSymbolsRes = passSpecialSymbols.test(inputPassword.value);
