@@ -20,7 +20,7 @@ const ValidateForm = (function () {
         this.validatePassword(),
         this.validateCountry()
       );
-      
+
       if (
         this.validateName() &&
         this.validatePassword &&
@@ -34,10 +34,12 @@ const ValidateForm = (function () {
     },
 
     validateName: function () {
-      const nameRegExp = /^[0-9a-zA-Zа-яА-Я^\s ]{1,}$/;
-      const nameResult = nameRegExp.test(inputName.value);
+      const nameSpecialSymbols = /([0-9a-zA-Zа-яёА-ЯЁ,]+( [0-9a-zA-Zа-яёА-ЯЁ,]+)*){1,30}/g;
+      const nameSpaceSymbols = /^((?!\s{2}).)*$/
+      const nameSpecialSymbolsRes = nameSpecialSymbols.test(inputName.value);
+      const nameSpaceRes = nameSpaceSymbols.test(inputName.value);
 
-      if (!nameResult) {
+      if (inputName.value.length === 0) {
         this.errorMsg(inputName, errName, `<p>Name is required fields</p>`);
         return false;
       }
@@ -47,34 +49,42 @@ const ValidateForm = (function () {
         return false;
       }
 
+      if (!nameSpecialSymbolsRes) {
+        this.errorMsg(inputName, errName, `<p>No special character</p>`);
+        return false;
+      }
+
+      if (!nameSpaceRes) {
+        this.errorMsg(inputName, errName, `<p>No more 2 spaces in a row</p>`);
+        return false;
+      }
+
+     
+
       this.clearError(errName, inputName);
       return true;
     },
 
     validatePassword: function () {
-      const passRegExp = /^[0-9a-zA-Zа-яА-Я]{4,}$/;
-      const passResult = passRegExp.test(inputPassword.value);
-
-      if (inputPassword.value.trim() === '') {
-        this.errorMsg(inputPassword, errPass, `<p>Only space not allowed</p>`);
-        return false;
-      }
+      const passSpaceRegExp = /^((?!\s{0}).)*$/;
+      const passSpecialSymbols = /^[^!@#$%^&*()_]{0,1}/;
+      const passSpaceRes = passSpaceRegExp.test(inputPassword.value);
+      const passSpecialSymbolsRes = passSpecialSymbols.test(inputPassword.value);
 
       if (inputPassword.value.length <= 3) {
-        this.errorMsg(
-          inputPassword,
-          errPass,
-          `<p>Password must be min 4 characters</p>`
+        this.errorMsg( inputPassword, errPass,
+          `<p>Password must be min 4 letters</p>`
         );
         return false;
       }
 
-      if (!passResult) {
-        this.errorMsg(
-          inputPassword,
-          errPass,
-          `<p>Password must be min letters and numbers</p>`
-        );
+      if (!passSpaceRes) {
+        this.errorMsg(inputPassword, errPass, `<p>No space</p>`);
+        return false;
+      }
+
+      if (!passSpecialSymbolsRes) {
+        this.errorMsg(inputPassword, errPass, `<p>One special character in a row</p>`);
         return false;
       }
 
@@ -108,12 +118,12 @@ const ValidateForm = (function () {
 
     errorMsg: function (input, className, msg) {
       input.classList.add('form__error');
-      className.style.display = 'block';
+      className.style.visibility = 'visible';
       className.innerHTML = msg;
     },
 
     clearError: function (classType, input) {
-      classType.style.display = 'none';
+      classType.style.visibility = 'hidden';
       input.classList.remove('form__error');
     },
   };

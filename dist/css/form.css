@@ -13,7 +13,6 @@
 .form__validate {
   width: 100%;
   max-width: 356px;
-  min-height: 520px;
   padding: 50px 20px 20px 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -27,12 +26,14 @@
   margin-bottom: 58px;
 }
 
-.form__field {
-  margin-bottom: 33px;
+.form__field:nth-child(5) {
+  margin-bottom: 35px;
+  padding-left: 12px;
 }
 
 .form__field:nth-child(6) {
   margin-bottom: 55px;
+  padding-left: 12px;
 }
 
 .form__select {
@@ -112,7 +113,7 @@
 
 .form__field>.fa-eye {
   position: absolute;
-  padding: 12px 0 0 15px;
+  padding: 15px 0 0 15px;
   margin-left: -45px;
   font-size: 15px;
 }
@@ -128,18 +129,18 @@
 }
 
 .form__error {
-  border: 1px solid #cc0033 !important;
+  border: 1px solid #FF0000 !important;
 }
 
 .form__error--password,
 .form__error--name,
 .form__error--country {
-  color: #cc0033;
-  display: inline-block;
-  font-size: 12px;
-  line-height: 15px;
-  margin: 5px 0 0;
-  display: none;
+  color: #FF0000;
+  height: 12px;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 12px 0 12px 20px;
+  visibility: 'hidden';
 }
 
 .form__btn {
@@ -152,6 +153,7 @@
   font-size: 16px;
   font-weight: 500;
   transition: all 0.2s;
+  margin-bottom: 32px;
 }
 
 .form__btn:hover {
