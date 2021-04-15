@@ -99,12 +99,19 @@
   &__field i {
     color: #babcbe;
     position: absolute;
-    padding: 15px 0 0 15px;
+    padding: 12px 0 0 15px;
+    font-size: 17px;
+  }
+
+  &__field > .fa-lock {
+    font-size: 20px;
   }
 
   &__field > .fa-eye {
     position: absolute;
+    padding: 12px 0 0 15px;
     margin-left: -45px;
+    font-size: 15px;
   }
 
   &__field .fa-eye:hover {
