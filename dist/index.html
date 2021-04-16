@@ -8,68 +8,12 @@
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
-
 <body>
-  <section class="form">
-    <form method="post" name='myform' action="" id="form" class="form__validate"
-      onsubmit="return ValidateForm.validate(event)">
-      <p class="form__title">Create a new account</p>
-      <div class="form__field">
-        <label for="full-name"></label>
-        <i class="fa fa-envelope icon"></i>
-        <input onchange="ValidateForm.validateName()" class="form__name" type="text" name="full-name" id="full-name"
-          placeholder="Name" maxlength="30"/>
-        <div class="form__error--name"></div>
-      </div>
-      <div class="form__field">
-        <label for="password-input"></label>
-        <i class="fa fa-lock icon"></i>
-        <input onchange="ValidateForm.validatePassword()" type="password" class="form__password" name="password-input"
-          id="password-input" placeholder="Password" onkeyup="this.value=this.value.replace(/\s+/gi,'')" maxlength="50"/>
-        <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
-        <div class="form__error--password"></div>
-      </div>
-      </div>
-      <div class="form__field">
-        <p>
-          <select onchange="ValidateForm.validateCountry()" class="form__select" id='country-select' name="country">
-            <option value="ukraine">Ukraine</option>
-            <option value="spain">Spain</option>
-            <option value="usa">Usa</option>
-            <option value="nipal">Serbia</option>
-            <option value="egypt">Egypt</option>
-            <option value="rome">Georgia</option>
-            <option value="canada">Canada</option>
-            <option value="india">India</option>
-            <option value="russia">Russia</option>
-            <option value="china">China</option>
-          </select>
-        </p>
-        <div class="form__error--country"></div>
-      </div>
-      <div class="form__field">
-        <span>
-          <input type="radio" name="gender" id="male-input" required />
-          <label for="male-input">Male</label>
-          <input type="radio" name="gender" id="female-input" required />
-          <label for="female-input">Female</label>
-        </span>
-      </div>
-      <div class="form__field">
-        <span>
-          <input onchange="ValidateForm.btnCheck()" type="checkbox" name="terms" id="terms" />
-          <label for="terms">Accept <a href="#">terms</a> and
-            <a href="#">conditions</a></label>
-        </span>
-      </div>
-      <button class="btn form__btn" type="submit">Sign Up</button>
-    </form>
-  </section>
   <main class="wrapper">
     <div class="cards">
       <div class="cards__body">
