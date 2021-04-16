@@ -1,0 +1,230 @@
+body {
+  background-color: #f7f7f7;
+}
+.stack {
+  position: relative;
+  margin-top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 440px;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  // background: rgb(214, 7, 59);
+  border: 2px dotted #000;
+  position: absolute;
+  transform: translateY(0);
+  animation: onTop 10s 2s ease infinite;
+  box-shadow: 4px 4px 8px rgba(180, 181, 185, 0.5);
+}
+.card.one {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  animation-name: onTop;
+}
+.card.two {
+  left: 20px;
+  top: 20px;
+  z-index: 1;
+  animation-name: onMiddle;
+}
+.card.three {
+  left: 40px;
+  top: 40px;
+  z-index: 0;
+  animation-name: onBottom;
+}
+.card .card__content {
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
+    'DejaVu Sans', Verdana, 'sans-serif';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__content span {
+  font-size: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 100%);
+  margin-bottom: 100px;
+}
+
+.card__content ul {
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  margin-bottom: 100px;
+}
+
+.card__nav-next {
+  width: 120px;
+  position: absolute;
+  left: 135%;
+  top: 50%;
+  transform: rotate(90deg);
+}
+
+.card__content > ul > li {
+  margin-bottom: 20px;
+}
+
+@keyframes onTop {
+  5% {
+    transform: translateY(-300px);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  10% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+  40% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+  50% {
+    transform: translateY(0);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  70% {
+    transform: translateY(0);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  80% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+  100% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+}
+
+@keyframes onMiddle {
+  10% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+  40% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+  45% {
+    transform: translateY(-300px);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  50% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+  70% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+  80% {
+    transform: translateY(0);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  100% {
+    transform: translateY(0);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+}
+@keyframes onBottom {
+  10% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  40% {
+    transform: translateY(0);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  50% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+  70% {
+    transform: translateY(0);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: rgb(26, 236, 43);
+  }
+  75% {
+    transform: translateY(-300px);
+    z-index: 1;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(224, 41, 35);
+  }
+  80% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+  100% {
+    transform: translateY(0);
+    z-index: 0;
+    left: 40px;
+    top: 40px;
+    background-color: rgb(224, 41, 35);
+  }
+}
