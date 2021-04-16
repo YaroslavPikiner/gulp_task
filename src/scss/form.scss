@@ -47,8 +47,9 @@
     background-color: #f5f8fa !important;
     border: 1px solid #dbe0e4;
     color: #babcbe;
-    background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png) 95.5% 56% no-repeat;
-    background-size:2%;
+    background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png)
+      95.5% 56% no-repeat;
+    background-size: 2%;
   }
 
   &__name,
@@ -60,7 +61,7 @@
     background-color: #f5f8fa;
     border: 1px solid #dbe0e4;
     outline: none;
-    padding-left: 40px;
+    padding: 0 40px 0 37px;
   }
 
   &__field > span > label {
@@ -126,13 +127,13 @@
   }
 
   &__error {
-    border: 1px solid #FF0000 !important;
+    border: 1px solid #ff0000 !important;
   }
 
   &__error--password,
   &__error--name,
   &__error--country {
-    color: #FF0000;
+    color: #ff0000;
     height: 12px;
     font-size: 10px;
     line-height: 12px;
