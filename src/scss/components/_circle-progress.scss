@@ -1,0 +1,42 @@
+.circle__progress {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.circle__progress > input {
+  width: 10%;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+  margin-bottom: 20px;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.circle__progress-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+.circle__progress-subtitle {
+  font-size: 25px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #fff;
+}

@@ -76,7 +76,7 @@ body {
 
 @keyframes onTop {
   5% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;
@@ -98,14 +98,14 @@ body {
   }
   50% {
     transform: translateY(0);
-    z-index: 1;
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: rgb(224, 41, 35);
   }
   70% {
     transform: translateY(0);
-    z-index: 1;
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: rgb(224, 41, 35);
@@ -142,7 +142,7 @@ body {
     background-color: rgb(26, 236, 43);
   }
   45% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;
@@ -207,7 +207,7 @@ body {
     background-color: rgb(26, 236, 43);
   }
   75% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;

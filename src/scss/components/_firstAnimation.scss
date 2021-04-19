@@ -32,16 +32,20 @@
     color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 800;
+    cursor: pointer;
+
   }
 
   &__btn--yes {
     color: red;
+    outline: none;
 
   }
 
   &__btn--no {
     background-color: red;
     color: #fff;
+    outline: none;
   }
 
   &__text {
@@ -64,12 +68,12 @@
     padding: 20px;
     border-radius: 25px;
     margin: 10px;
-    animation: back 0.7s ease-in-out;
+    cursor: pointer;
   }
 }
 
 .wrapper__modal {
-  padding-bottom: 300px;
+  padding-bottom: 200px;
 }
 
 .active {

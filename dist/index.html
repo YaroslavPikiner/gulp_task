@@ -15,13 +15,21 @@
 </head>
 
 <body>
+
+  <div class="circle__progress">
+    <h1 class="circle__progress-title">SVG Circle Progress</h1>
+    <h2 class="circle__progress-subtitle">Based off of CSS3 circle progress bars</h2>
+    <svg class="progress-ring" width="360" height="360">
+      <circle class="progress-ring__circle" stroke="#ff9f1e" stroke-width="40" fill="transparent" r="150" cx="180"
+        cy="180" />
+      <text id="count" x="50%" y="50%" fill="white" text-anchor="middle" value='100%' dy="7" font-size="30">0%</text>
+    </svg>
+    <input value="100%" type="number" step="5" min="0" max="100" placeholder="Type a percent!">
+  </div>
+
   <div class="clock">
-    <div class="filler"></div>
-    <svg width="500" height="500">
-      <g>
-        <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:#ff8800" cx="180" cy="180" r="180"></circle>
-      </g>
-      <g>
+    <svg width="360" height="360">
+        <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:#ff3c00" cx="180" cy="180" r="180"></circle>
         <line x1="180" y1="180" x2="180" y2="40" style="stroke-width: 10px; stroke: #fff;" id="minutehand">
           <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="3600s"
             repeatCount="indefinite" />
@@ -30,22 +38,45 @@
           <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s"
             repeatCount="indefinite" />
         </line>
+        <circle id="circle" style="stroke: rgb(0, 0, 0); stroke-width: 2px; fill:#000000" cx="180" cy="180" r="5">
+        </circle>
       </g>
+    </svg>
+  </div>
+
+  <div class="clock">
+    <div class="filler1"></div>
+    <svg width="360" height="360">
+      <g>
+        <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:#0099ff" cx="180" cy="180" r="180"></circle>
+      </g>
+      <g>
+        <line id='circle-minutes' x1="180" y1="180" x2="180" y2="40" style="stroke-width: 10px; stroke: #fff;"></line>
+        <line id='circle-seconds' x1="180" y1="180" x2="180" y2="30" style="stroke-width: 5px; stroke: #fff;"></line>
+        <circle id="circle" style="stroke: rgb(0, 0, 0); stroke-width: 2px; fill:#000000" cx="180" cy="180" r="5">
+        </circle>
+      </g>
+      <defs>
+        <animatetransform attributeName="transform" attributeType="XML" type="rotate" from="0 180 180" to="360 180 180"
+          xlink:href='#circle-minutes' dur="10s" repeatCount="indefinite" />
+        <animatetransform attributeName="transform" attributeType="XML" type="rotate" from="0 180 180" to="360 180 180"
+          xlink:href='#circle-seconds' dur="5s" repeatCount="indefinite" />
+      </defs>
     </svg>
   </div>
   <div class="wrapper wrapper__modal">
     <div class="container">
       <div class="delete">
-        <a class="delete__btn--main" href="#">Delete</a>
-        <div class="delete__popup " id="popup1">
+        <div class="delete__btn--main" >Delete</div>
+        <div class="delete__popup" id="popup1">
           <h2 class="delete__title"> Delete this item ? </h2>
           <p class="delete__text">
             This operation will permanently delete this item and all its dependesies.
             This action <span class="delete__text--bold">cannot be encode</span>
           </p>
           <div class="delete__btn">
-            <a class="btn delete__btn--yes" href="#"> Oh no, bring me back</a>
-            <a class="btn delete__btn--no" href="#">I understant, delete it </a>
+            <button class="btn delete__btn--yes"> Oh no, bring me back</button>
+            <button class="btn delete__btn--no">I understant, delete it </button>
           </div>
         </div>
       </div>
@@ -90,34 +121,6 @@
         </div>
       </div>
     </figure>
-  </div>
-  <div class="buttons">
-    <div class="buttons__list">
-      <div class="buttons__item buttons__item--1">
-        <div class="buttons__item--link" href="#">
-          <span class="buttons__item--front">Click</span>
-          <span class="buttons__item--back">Thanks</span>
-        </div>
-      </div>
-      <div class="buttons__item buttons__item--2">
-        <div class="buttons__item--link" href="#">
-          <span class="buttons__item--front">Click</span>
-          <span class="buttons__item--back">Thanks</span>
-        </div>
-      </div>
-      <div class="buttons__item buttons__item--3">
-        <div class="buttons__item--link" href="#">
-          <span class="buttons__item--front">Click</span>
-          <span class="buttons__item--back">Thanks</span>
-        </div>
-      </div>
-      <div class="buttons__item buttons__item--4">
-        <div class="buttons__item--link" href="#">
-          <span class="buttons__item--front">Click</span>
-          <span class="buttons__item--back">Thanks</span>
-        </div>
-      </div>
-    </div>
   </div>
   <section class="form">
     <form method="post" name='myform' action="" id="form" class="form__validate"

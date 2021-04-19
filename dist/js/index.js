@@ -128,6 +128,8 @@ const ValidateForm = (function () {
   };
 })();
 
+// modal window
+
 const btnMain = document.querySelector(".delete__btn--main");
 btnMain.addEventListener("click", () => {
   document.getElementById("popup1").classList.toggle("active");
@@ -146,21 +148,55 @@ btnNo.addEventListener("click", () => {
 // clock
 
 let hands = [];
-hands.push(document.querySelector('#secondhand > *'));
-hands.push(document.querySelector('#minutehand > *'));
+hands.push(document.querySelector("#secondhand > *"));
+hands.push(document.querySelector("#minutehand > *"));
 
 let cx = 180;
 let cy = 180;
 
 function shifter(val) {
-  return [val, cx, cy].join(' ');
+  return [val, cx, cy].join(" ");
 }
 
 let date = new Date();
-const minuteAngle = 360 * date.getMinutes() / 60;
-const secAngle = 360 * date.getSeconds() / 60;
+const minuteAngle = (360 * date.getMinutes()) / 60;
+const secAngle = (360 * date.getSeconds()) / 60;
 
-hands[0].setAttribute('from', shifter(secAngle));
-hands[0].setAttribute('to', shifter(secAngle + 360));
-hands[1].setAttribute('from', shifter(minuteAngle));
-hands[1].setAttribute('to', shifter(minuteAngle + 360));
+hands[0].setAttribute("from", shifter(secAngle));
+hands[0].setAttribute("to", shifter(secAngle + 360));
+hands[1].setAttribute("from", shifter(minuteAngle));
+hands[1].setAttribute("to", shifter(minuteAngle + 360));
+
+// circle pointer
+
+// document.getElementById("amouth").addEventListener("change", function () {
+//   const text = document.getElementById("count");
+//   const inputVal = document.getElementById("amouth").value;
+//   let  pct = ((100-inputVal)/100);
+//   const bar = document.getElementById('bar');
+//   bar.style.strokeDashoffset = pct
+
+//   text.textContent = `${inputVal}%`;
+// });
+
+const circle = document.querySelector("circle");
+const radius = circle.r.baseVal.value;
+const circumference = radius * 2 * Math.PI;
+const count = document.getElementById('count')
+
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
+
+const input = document.querySelector("input");
+setProgress(input.value);
+
+input.addEventListener("change", function (e) {
+  setProgress(input.value);
+  count.textContent = `${input.value}%`
+});

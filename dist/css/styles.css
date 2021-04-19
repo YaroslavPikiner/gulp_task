@@ -399,15 +399,18 @@ li>i {
   color: #fff;
   font-size: 16px;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .delete__btn--yes {
   color: red;
+  outline: none;
 }
 
 .delete__btn--no {
   background-color: red;
   color: #fff;
+  outline: none;
 }
 
 .delete__text {
@@ -430,11 +433,11 @@ li>i {
   padding: 20px;
   border-radius: 25px;
   margin: 10px;
-  animation: back 0.7s ease-in-out;
+  cursor: pointer;
 }
 
 .wrapper__modal {
-  padding-bottom: 300px;
+  padding-bottom: 200px;
 }
 
 .active {
@@ -609,7 +612,7 @@ body {
 
 @keyframes onTop {
   5% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;
@@ -634,7 +637,7 @@ body {
 
   50% {
     transform: translateY(0);
-    z-index: 1;
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: #e02923;
@@ -642,7 +645,7 @@ body {
 
   70% {
     transform: translateY(0);
-    z-index: 1;
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: #e02923;
@@ -683,7 +686,7 @@ body {
   }
 
   45% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;
@@ -757,7 +760,7 @@ body {
   }
 
   75% {
-    transform: translateY(-300px);
+    transform: translateY(-350px);
     z-index: 1;
     left: 20px;
     top: 20px;
@@ -819,6 +822,48 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.circle__progress {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.circle__progress>input {
+  width: 10%;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+  margin-bottom: 20px;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.circle__progress-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+
+.circle__progress-subtitle {
+  font-size: 25px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 @font-face {
