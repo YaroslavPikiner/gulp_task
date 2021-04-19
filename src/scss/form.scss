@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 16px;
+  padding: 20px;
+  background-color: #102250;
+
+  &__validate {
+    width: 100%;
+    max-width: 356px;
+    padding: 50px 20px 20px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Roboto', 'sans-serif';
+    margin-bottom: 58px;
+  }
+
+  &__field:nth-child(5) {
+    margin-bottom: 35px;
+    padding-left: 12px;
+  }
+
+  &__field:nth-child(6) {
+    margin-bottom: 55px;
+    padding-left: 12px;
+  }
+
+  &__select {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: #f5f8fa !important;
+    border: 1px solid #dbe0e4;
+    color: #babcbe;
+    background: url(https://cdn.icon-icons.com/icons2/936/PNG/512/angle-arrow-down_icon-icons.com_73683.png)
+      95.5% 56% no-repeat;
+    background-size: 2%;
+  }
+
+  &__name,
+  &__password {
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #f5f8fa;
+    border: 1px solid #dbe0e4;
+    outline: none;
+    padding: 0 40px 0 37px;
+  }
+
+  &__field > span > label {
+    font-size: 12px;
+    margin-right: 18px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__field > span > input[type='checkbox'] {
+    appearance: none;
+    background-color: #f5f8fa;
+    border: 1px solid #dbe0e4;
+    padding: 6px;
+    border-radius: 3px;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    margin-bottom: -2px;
+  }
+
+  &__field > span > input[type='checkbox']:checked {
+    background-color: #f5f8fa;
+    border: 1px solid #2290df;
+  }
+
+  &__field > span > input[type='checkbox']:checked:after {
+    content: '✓';
+    font-size: 16px;
+    position: absolute;
+    top: -10px;
+    left: 1px;
+    color: #2290df;
+    margin-top: 5px;
+  }
+
+  &__field i {
+    color: #babcbe;
+    position: absolute;
+    padding: 12px 0 0 15px;
+    font-size: 17px;
+  }
+
+  &__field > .fa-lock {
+    font-size: 20px;
+  }
+
+  &__field > .fa-eye {
+    position: absolute;
+    padding: 15px 0 0 15px;
+    margin-left: -45px;
+    font-size: 15px;
+  }
+
+  &__field .fa-eye:hover {
+    cursor: pointer;
+    color: #000;
+  }
+
+  &__field > span > label > a {
+    color: #2290df;
+    text-decoration: none;
+  }
+
+  &__error {
+    border: 1px solid #ff0000 !important;
+  }
+
+  &__error--password,
+  &__error--name,
+  &__error--country {
+    color: #ff0000;
+    height: 12px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 12px 0 12px 20px;
+    visibility: 'hidden';
+  }
+
+  &__btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #f5f8fa;
+    outline: none;
+    border: 1px solid #0000000c;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin-bottom: 32px;
+  }
+
+  &__btn:hover {
+    background-color: #2290df;
+    color: #f5f8fa;
+    cursor: pointer;
+  }
+}

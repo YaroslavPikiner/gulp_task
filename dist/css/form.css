@@ -61,7 +61,7 @@
   background-color: #f5f8fa;
   border: 1px solid #dbe0e4;
   outline: none;
-  padding-left: 40px;
+  padding: 0 40px 0 37px;
 }
 
 .form__field>span>label {
@@ -129,13 +129,13 @@
 }
 
 .form__error {
-  border: 1px solid #FF0000 !important;
+  border: 1px solid #ff0000 !important;
 }
 
 .form__error--password,
 .form__error--name,
 .form__error--country {
-  color: #FF0000;
+  color: #ff0000;
   height: 12px;
   font-size: 10px;
   line-height: 12px;
