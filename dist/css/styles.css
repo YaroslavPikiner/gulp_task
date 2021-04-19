@@ -203,6 +203,63 @@ li>i {
   pointer-events: none;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.delete {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid red;
+  padding: 20px;
+  position: relative;
+  animation: two 2s ease-in;
+}
+
+.delete__popup {
+  position: absolute;
+  visibility: hidden;
+  top: 25%;
+  right: 0;
+}
+
+.delete__btn--main {
+  border: 1px solid red;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 5;
+  font-size: 20px;
+  color: white;
+  background-color: red;
+}
+
+.delete__popup:target {
+  visibility: visible;
+  animation: one 2s ease-in;
+  opacity: 1;
+}
+
+@keyframes one {
+  0% {
+    width: 200px;
+    height: 100px;
+  }
+
+  50% {
+    width: 400px;
+    height: 200px;
+  }
+
+  100% {
+
+  }
+}
+
 body {
   background-color: #f7f7f7;
 }
@@ -210,7 +267,7 @@ body {
 .stack {
   position: relative;
   margin-top: 50vh;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   width: 340px;
   height: 440px;
 }
@@ -222,7 +279,6 @@ body {
   border: 2px dotted #000;
   position: absolute;
   transform: translateY(0);
-  animation: onTop 10s 2s ease infinite;
   box-shadow: 4px 4px 8px rgba(180,181,185,0.5);
 }
 

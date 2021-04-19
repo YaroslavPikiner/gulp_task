@@ -2,3 +2,58 @@
 //     border: 2px solid rgb(179, 30, 30);
 //   background-color: rgb(109, 26, 243);
 //     color: #fff;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.delete {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid red;
+  padding: 20px;
+  position: relative;
+  animation: two 2s ease-in;
+
+
+  &__popup {
+    position: absolute;
+    visibility: hidden;
+    top: 25%;
+    right: 0;
+  }
+
+  &__btn--main {
+    border: 1px solid red;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 5;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+  }
+
+  &__popup:target {
+    visibility: visible;
+    animation: one 2s ease-in;
+    opacity: 1;
+  }
+}
+
+@keyframes one {
+  0% {
+    width: 200px;
+    height: 100px;
+  }
+  50% {
+    width: 400px;
+    height: 200px;
+  }
+  100% {
+  }
+}
