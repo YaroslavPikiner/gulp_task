@@ -781,6 +781,46 @@ body {
   }
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.buttons__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons__item {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #1abacf;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.buttons__item--link {
+  width: 170px;
+  height: 70px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.clock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @font-face {
   font-family: 'Avenir';
   src: url("../../fonts/AvenirNextLTPro-Demi.otf");

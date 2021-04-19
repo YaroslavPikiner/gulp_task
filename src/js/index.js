@@ -143,3 +143,24 @@ btnNo.addEventListener("click", () => {
   document.getElementById("popup1").classList.remove("active");
 });
 
+// clock
+
+let hands = [];
+hands.push(document.querySelector('#secondhand > *'));
+hands.push(document.querySelector('#minutehand > *'));
+
+let cx = 180;
+let cy = 180;
+
+function shifter(val) {
+  return [val, cx, cy].join(' ');
+}
+
+let date = new Date();
+const minuteAngle = 360 * date.getMinutes() / 60;
+const secAngle = 360 * date.getSeconds() / 60;
+
+hands[0].setAttribute('from', shifter(secAngle));
+hands[0].setAttribute('to', shifter(secAngle + 360));
+hands[1].setAttribute('from', shifter(minuteAngle));
+hands[1].setAttribute('to', shifter(minuteAngle + 360));
