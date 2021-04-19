@@ -26,16 +26,19 @@ const ValidateForm = (function () {
         this.validatePassword &&
         this.validateCountry()
       ) {
+        formBtn.style.backgroundColor = 'green';
         console.log('Logged');
       } else {
         console.log('Not autorized');
+        formBtn.style.backgroundColor = '#f5f8fa';
       }
+
       return true;
     },
 
     validateName: function () {
       const nameSpecialSymbols = /([0-9a-zA-Zа-яёА-ЯЁ,]+( [0-9a-zA-Zа-яёА-ЯЁ,]+)*){1,30}/g;
-      const nameSpaceSymbols = /^((?!\s{2}).)*$/
+      const nameSpaceSymbols = /^((?!\s{2}).)*$/;
       const nameSpecialSymbolsRes = nameSpecialSymbols.test(inputName.value);
       const nameSpaceRes = nameSpaceSymbols.test(inputName.value);
 
@@ -59,25 +62,31 @@ const ValidateForm = (function () {
         return false;
       }
 
-     
-
       this.clearError(errName, inputName);
       return true;
     },
 
     validatePassword: function () {
       const passSpecialSymbols = /^[^!@#$%^&*()_]{1,}/;
-      const passSpecialSymbolsRes = passSpecialSymbols.test(inputPassword.value);
+      const passSpecialSymbolsRes = passSpecialSymbols.test(
+        inputPassword.value
+      );
 
       if (inputPassword.value.length <= 3) {
-        this.errorMsg( inputPassword, errPass,
+        this.errorMsg(
+          inputPassword,
+          errPass,
           `<p>Password must be min 4 letters</p>`
         );
         return false;
       }
 
       if (!passSpecialSymbolsRes) {
-        this.errorMsg(inputPassword, errPass, `<p>One special character in a row</p>`);
+        this.errorMsg(
+          inputPassword,
+          errPass,
+          `<p>One special character in a row</p>`
+        );
         return false;
       }
 
