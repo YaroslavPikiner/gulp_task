@@ -1,16 +1,16 @@
 /* eslint-disable */
 const ValidateForm = (function () {
-  const inputPassword = document.getElementById('password-input');
-  const inputCountry = document.getElementById('country-select');
-  const inputName = document.getElementById('full-name');
+  const inputPassword = document.getElementById("password-input");
+  const inputCountry = document.getElementById("country-select");
+  const inputName = document.getElementById("full-name");
 
-  const errName = document.querySelector('.form__error--name');
-  const errPass = document.querySelector('.form__error--password');
-  const errCountry = document.querySelector('.form__error--country');
+  const errName = document.querySelector(".form__error--name");
+  const errPass = document.querySelector(".form__error--password");
+  const errCountry = document.querySelector(".form__error--country");
 
-  const termCheckbox = document.getElementById('terms');
-  let formBtn = document.querySelector('.form__btn');
-  formBtn.setAttribute('disabled', 'true');
+  const termCheckbox = document.getElementById("terms");
+  let formBtn = document.querySelector(".form__btn");
+  formBtn.setAttribute("disabled", "true");
 
   return {
     validate: function (e) {
@@ -26,16 +26,16 @@ const ValidateForm = (function () {
         this.validatePassword &&
         this.validateCountry()
       ) {
-        console.log('Logged');
+        console.log("Logged");
       } else {
-        console.log('Not autorized');
+        console.log("Not autorized");
       }
       return true;
     },
 
     validateName: function () {
       const nameSpecialSymbols = /([0-9a-zA-Zа-яёА-ЯЁ,]+( [0-9a-zA-Zа-яёА-ЯЁ,]+)*){1,30}/g;
-      const nameSpaceSymbols = /^((?!\s{2}).)*$/
+      const nameSpaceSymbols = /^((?!\s{2}).)*$/;
       const nameSpecialSymbolsRes = nameSpecialSymbols.test(inputName.value);
       const nameSpaceRes = nameSpaceSymbols.test(inputName.value);
 
@@ -44,7 +44,7 @@ const ValidateForm = (function () {
         return false;
       }
 
-      if (inputName.value.trim() === '') {
+      if (inputName.value.trim() === "") {
         this.errorMsg(inputName, errName, `<p>Only space not allowed</p>`);
         return false;
       }
@@ -59,25 +59,31 @@ const ValidateForm = (function () {
         return false;
       }
 
-     
-
       this.clearError(errName, inputName);
       return true;
     },
 
     validatePassword: function () {
       const passSpecialSymbols = /^[^!@#$%^&*()_]{1,}/;
-      const passSpecialSymbolsRes = passSpecialSymbols.test(inputPassword.value);
+      const passSpecialSymbolsRes = passSpecialSymbols.test(
+        inputPassword.value
+      );
 
       if (inputPassword.value.length <= 3) {
-        this.errorMsg( inputPassword, errPass,
+        this.errorMsg(
+          inputPassword,
+          errPass,
           `<p>Password must be min 4 letters</p>`
         );
         return false;
       }
 
       if (!passSpecialSymbolsRes) {
-        this.errorMsg(inputPassword, errPass, `<p>One special character in a row</p>`);
+        this.errorMsg(
+          inputPassword,
+          errPass,
+          `<p>One special character in a row</p>`
+        );
         return false;
       }
 
@@ -97,32 +103,43 @@ const ValidateForm = (function () {
 
     btnCheck: function () {
       termCheckbox.checked
-        ? formBtn.removeAttribute('disabled')
-        : formBtn.setAttribute('disabled', 'true');
+        ? formBtn.removeAttribute("disabled")
+        : formBtn.setAttribute("disabled", "true");
     },
 
     tooglePassword: function () {
-      if (inputPassword.type === 'password') {
-        inputPassword.type = 'text';
+      if (inputPassword.type === "password") {
+        inputPassword.type = "text";
       } else {
-        inputPassword.type = 'password';
+        inputPassword.type = "password";
       }
     },
 
     errorMsg: function (input, className, msg) {
-      input.classList.add('form__error');
-      className.style.visibility = 'visible';
+      input.classList.add("form__error");
+      className.style.visibility = "visible";
       className.innerHTML = msg;
     },
 
     clearError: function (classType, input) {
-      classType.style.visibility = 'hidden';
-      input.classList.remove('form__error');
+      classType.style.visibility = "hidden";
+      input.classList.remove("form__error");
     },
   };
 })();
 
+const btnMain = document.querySelector(".delete__btn--main");
+btnMain.addEventListener("click", () => {
+  document.getElementById("popup1").classList.toggle("active");
+});
 
-// modal 
+const btnYes = document.querySelector(".delete__btn--yes");
+btnYes.addEventListener("click", () => {
+  document.getElementById("popup1").classList.remove("active");
+});
 
-console.log('asjdaldkasjld');
+const btnNo = document.querySelector(".delete__btn--no");
+btnNo.addEventListener("click", () => {
+  document.getElementById("popup1").classList.remove("active");
+});
+
