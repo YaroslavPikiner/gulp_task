@@ -7,6 +7,7 @@ const minifyJs = require('gulp-uglify');
 const prettier = require('gulp-prettier');
 const eslint = require('gulp-eslint');
 const gcmq = require('gulp-group-css-media-queries');
+const concat = require('gulp-concat');
 
 function style() {
   return gulp
@@ -39,6 +40,15 @@ function compress() {
     .pipe(eslint.failAfterError())
     .pipe(minifyJs())
     .pipe(gulp.dest('./dist/js'));
+}
+
+function scripts() {
+  return src([
+    'src/js/main.js'
+  ])
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('dist/js'))
 }
 
 function linter() {
