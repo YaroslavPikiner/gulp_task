@@ -208,6 +208,7 @@ li>i {
   justify-content: center;
   align-items: center;
   height: 20vh;
+  margin-bottom: 150px;
 }
 
 .delete {
@@ -218,7 +219,6 @@ li>i {
   border: 1px solid red;
   padding: 20px;
   position: relative;
-  animation: two 2s ease-in;
 }
 
 .delete__popup {
@@ -238,16 +238,23 @@ li>i {
   background-color: red;
 }
 
+.delete__btn--main {
+  animation-name: buttons;
+  animation-duration: 1s;
+}
+
 .delete__popup:target {
   visibility: visible;
-  animation: one 2s ease-in;
   opacity: 1;
+  animation: one 2s linear;
 }
 
 @keyframes one {
   0% {
     width: 200px;
     height: 100px;
+    background-color: red;
+    border: 1px solid red;
   }
 
   50% {
@@ -256,7 +263,18 @@ li>i {
   }
 
   100% {
+    width: 500px;
+    height: 300px;
+  }
+}
 
+@keyframes buttons {
+  0% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -279,6 +297,7 @@ body {
   border: 2px dotted #000;
   position: absolute;
   transform: translateY(0);
+  animation: onTop 10s 2s ease infinite;
   box-shadow: 4px 4px 8px rgba(180,181,185,0.5);
 }
 
