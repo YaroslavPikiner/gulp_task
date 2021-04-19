@@ -9,6 +9,8 @@
 
 .circle__progress > input {
   width: 10%;
+  height: 40px;
+  font-size: 26px;
 }
 
 .progress-ring__circle {
@@ -32,7 +34,6 @@
   font-weight: 600;
   color: #fff;
 }
-
 
 .circle__progress-subtitle {
   font-size: 25px;

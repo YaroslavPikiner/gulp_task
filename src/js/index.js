@@ -32,7 +32,7 @@ const ValidateForm = (function () {
       }
       return true;
     },
-
+    // function whos validate country name
     validateName: function () {
       const nameSpecialSymbols = /([0-9a-zA-Zа-яёА-ЯЁ,]+( [0-9a-zA-Zа-яёА-ЯЁ,]+)*){1,30}/g;
       const nameSpaceSymbols = /^((?!\s{2}).)*$/;
@@ -63,6 +63,7 @@ const ValidateForm = (function () {
       return true;
     },
 
+    // function whos validate country password
     validatePassword: function () {
       const passSpecialSymbols = /^[^!@#$%^&*()_]{1,}/;
       const passSpecialSymbolsRes = passSpecialSymbols.test(
@@ -91,6 +92,7 @@ const ValidateForm = (function () {
       return true;
     },
 
+    // function whos validate country select
     validateCountry: function () {
       if (!inputCountry.value) {
         this.errorMsg(inputCountry, errCountry, `<p>Chose your country</p>`);
@@ -100,13 +102,13 @@ const ValidateForm = (function () {
       this.clearError(errCountry, inputCountry);
       return true;
     },
-
+    // check if btn true then opened sign in btn
     btnCheck: function () {
       termCheckbox.checked
         ? formBtn.removeAttribute("disabled")
         : formBtn.setAttribute("disabled", "true");
     },
-
+    // toogle eye icon 
     tooglePassword: function () {
       if (inputPassword.type === "password") {
         inputPassword.type = "text";
@@ -114,13 +116,13 @@ const ValidateForm = (function () {
         inputPassword.type = "password";
       }
     },
-
+    // create error function
     errorMsg: function (input, className, msg) {
       input.classList.add("form__error");
       className.style.visibility = "visible";
       className.innerHTML = msg;
     },
-
+    // function whos clean error 
     clearError: function (classType, input) {
       classType.style.visibility = "hidden";
       input.classList.remove("form__error");
@@ -146,11 +148,9 @@ btnNo.addEventListener("click", () => {
 });
 
 // clock
-
 let hands = [];
 hands.push(document.querySelector("#secondhand > *"));
 hands.push(document.querySelector("#minutehand > *"));
-
 let cx = 180;
 let cy = 180;
 
@@ -168,17 +168,6 @@ hands[1].setAttribute("from", shifter(minuteAngle));
 hands[1].setAttribute("to", shifter(minuteAngle + 360));
 
 // circle pointer
-
-// document.getElementById("amouth").addEventListener("change", function () {
-//   const text = document.getElementById("count");
-//   const inputVal = document.getElementById("amouth").value;
-//   let  pct = ((100-inputVal)/100);
-//   const bar = document.getElementById('bar');
-//   bar.style.strokeDashoffset = pct
-
-//   text.textContent = `${inputVal}%`;
-// });
-
 const circle = document.querySelector("circle");
 const radius = circle.r.baseVal.value;
 const circumference = radius * 2 * Math.PI;
@@ -194,8 +183,6 @@ function setProgress(percent) {
 }
 
 const input = document.querySelector("input");
-setProgress(input.value);
-
 input.addEventListener("change", function (e) {
   setProgress(input.value);
   count.textContent = `${input.value}%`

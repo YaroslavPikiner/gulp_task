@@ -436,10 +436,6 @@ li>i {
   cursor: pointer;
 }
 
-.wrapper__modal {
-  padding-bottom: 200px;
-}
-
 .active {
   display: flex;
 }
@@ -587,21 +583,21 @@ body {
   font-size: 24px;
   top: 50%;
   left: 50%;
-  transform: translate(50%, 100%);
+  transform: translate(10%, 100%);
   margin-bottom: 100px;
 }
 
 .card__content ul {
   top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
-  margin-bottom: 100px;
+  left: 45%;
+  transform: translate(25%, 30%);
+  margin-bottom: 150px;
 }
 
 .card__nav-next {
   width: 120px;
   position: absolute;
-  left: 135%;
+  left: 140%;
   top: 50%;
   transform: rotate(90deg);
 }
@@ -818,7 +814,7 @@ body {
 }
 
 .clock {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -835,6 +831,8 @@ body {
 
 .circle__progress>input {
   width: 10%;
+  height: 40px;
+  font-size: 26px;
 }
 
 .progress-ring__circle {
