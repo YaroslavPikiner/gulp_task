@@ -1,82 +1,19 @@
-// background-color: rgb(179, 30, 30);
-//     border: 2px solid rgb(179, 30, 30);
-//   background-color: rgb(109, 26, 243);
-//     color: #fff;
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  margin-bottom: 150px;
-}
-
 .delete {
-  text-align: center;
-  width: 200px;
-  height: 100px;
-  background-color: red;
+  width: 170px;
+  height: 70px;
   border: 1px solid red;
-  padding: 20px;
-  position: relative;
-
+  background-color: red;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 4;
 
   &__popup {
-    position: absolute;
-    visibility: hidden;
-    top: 25%;
-    right: 0;
+    display: none;
   }
 
   &__btn--main {
-    border: 1px solid red;
     text-decoration: none;
     font-weight: 600;
-    line-height: 5;
-    font-size: 20px;
-    color: white;
-    background-color: red;
-  }
-
-  
-&__btn--main  {
-  animation-name:  buttons;
-  animation-duration: 1s;
-
-}
-
-  &__popup:target {
-    visibility: visible;
-    opacity: 1;
-  animation: one 2s linear;
-  }
-}
-
-@keyframes one {
-  0% {
-    width: 200px;
-    height: 100px;
-    background-color: red;
-    border: 1px solid red;
-  }
-  50% {
-    width: 400px;
-    height: 200px;
-  }
-  100% {
-    width: 500px;
-    height: 300px;
-  }
-}
-
-
-
-@keyframes buttons {
-  0% {
-    transform: scale(3);
-  }
-
-  100%{
-    transform: scale(1);
+    color: rgb(255, 255, 255);
   }
 }

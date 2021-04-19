@@ -121,3 +121,8 @@ const ValidateForm = (function () {
     },
   };
 })();
+
+
+// modal 
+
+console.log('asjdaldkasjld');
