@@ -20,26 +20,26 @@
     <h1 class="circle__progress-title">SVG Circle Progress</h1>
     <h2 class="circle__progress-subtitle">Based off of CSS3 circle progress bars</h2>
     <svg class="progress-ring" width="360" height="360">
-      <circle class="progress-ring__circle" stroke="#ff9f1e" stroke-width="40" fill="transparent" r="150" cx="180"
+      <circle class="progress-ring__circle" stroke="#ff9f1e" stroke-width="45" fill="transparent" r="150" cx="180"
         cy="180" />
       <text id="count" x="50%" y="50%" fill="white" text-anchor="middle" value='100%' dy="7" font-size="30">0%</text>
     </svg>
-    <input value="100%" type="number" step="5" min="0" max="100" placeholder="Type a percent!">
+    <input id='present' value="100%" type="number" step="5" min="0" max="100" placeholder="Type a percent!">
   </div>
 
   <div class="clock">
     <svg width="360" height="360">
-        <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:#ff3c00" cx="180" cy="180" r="180"></circle>
-        <line x1="180" y1="180" x2="180" y2="40" style="stroke-width: 10px; stroke: #fff;" id="minutehand">
-          <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="3600s"
-            repeatCount="indefinite" />
-        </line>
-        <line x1="180" y1="180" x2="180" y2="30" style="stroke-width: 5px; stroke: #fff;" id="secondhand">
-          <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s"
-            repeatCount="indefinite" />
-        </line>
-        <circle id="circle" style="stroke: rgb(0, 0, 0); stroke-width: 2px; fill:#000000" cx="180" cy="180" r="5">
-        </circle>
+      <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:#ff3c00" cx="180" cy="180" r="180"></circle>
+      <line x1="180" y1="180" x2="180" y2="40" style="stroke-width: 10px; stroke: #fff;" id="minutehand">
+        <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="3600s"
+          repeatCount="indefinite" />
+      </line>
+      <line x1="180" y1="180" x2="180" y2="30" style="stroke-width: 5px; stroke: #fff;" id="secondhand">
+        <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s"
+          repeatCount="indefinite" />
+      </line>
+      <circle id="circle" style="stroke: rgb(0, 0, 0); stroke-width: 2px; fill:#000000" cx="180" cy="180" r="5">
+      </circle>
       </g>
     </svg>
   </div>
@@ -64,119 +64,128 @@
       </defs>
     </svg>
   </div>
-  <div class="wrapper wrapper__modal">
-    <div class="container">
-      <div class="delete">
-        <div class="delete__btn--main" >Delete</div>
-        <div class="delete__popup" id="popup1">
-          <h2 class="delete__title"> Delete this item ? </h2>
-          <p class="delete__text">
-            This operation will permanently delete this item and all its dependesies.
-            This action <span class="delete__text--bold">cannot be encode</span>
+  
+  <div class="animations">
+    <div class="animated__block">
+      <div class="modal__box modal__box_button">
+        <div class="modal__box__wrapper">
+          <h2 class="modal__box__title">
+            Delete this item?
+          </h2>
+          <p class="modal__box__text">
+            This operation will permanently delete this
+            item and all its dependencies. This action
+            <strong>cannot be undone</strong>.
           </p>
-          <div class="delete__btn">
-            <button class="btn delete__btn--yes"> Oh no, bring me back</button>
-            <button class="btn delete__btn--no">I understant, delete it </button>
+          <div class="modal__box__buttons">
+            <button class="hide modal__box__button">
+              Oh no, bring me back
+            </button>
+            <button class="hide modal__box__button modal__box--red ">
+              I understand, delete it
+            </button>
           </div>
         </div>
+        <button class="modal__box__folded-button delete__btn">Delete</и>
       </div>
     </div>
   </div>
-  <div class="wrapper wrapper__shuffle">
-    <figure class="stack">
-      <div class="card one">
-        <div class=" card__content">
-          <span>Basic Level</span>
-          <ul>
-            <li>HTML/CSS/JavaScript</li>
-            <li>Internet Basics</li>
-            <li>Devtools basics</li>
-          </ul>
-          <a class="card__nav-next" href="#">next card &#x21DD</a>
-          <a class="card__nav-see" href="#">see more &#8669;</a>
+
+    <div class="wrapper wrapper__shuffle">
+      <figure class="stack">
+        <div class="card one">
+          <div class=" card__content">
+            <span>Basic Level</span>
+            <ul>
+              <li>HTML/CSS/JavaScript</li>
+              <li>Internet Basics</li>
+              <li>Devtools basics</li>
+            </ul>
+            <a class="card__nav-next" href="#">next card &#x21DD</a>
+            <a class="card__nav-see" href="#">see more &#8669;</a>
+          </div>
         </div>
-      </div>
-      <div class="card two">
-        <div class=" card__content">
-          <span>Intermidiate Level</span>
-          <ul>
-            <li>Pug/Sass/ES6</li>
-            <li>WordPress</li>
-            <li>Git</li>
-          </ul>
-          <a class="card__nav-next" href="#">next card &#x21DD</a>
-          <a class="card__nav-see" href="#">see more &#8669;</a>
+        <div class="card two">
+          <div class=" card__content">
+            <span>Intermidiate Level</span>
+            <ul>
+              <li>Pug/Sass/ES6</li>
+              <li>WordPress</li>
+              <li>Git</li>
+            </ul>
+            <a class="card__nav-next" href="#">next card &#x21DD</a>
+            <a class="card__nav-see" href="#">see more &#8669;</a>
+          </div>
         </div>
-      </div>
-      <div class="card three">
-        <div class=" card__content">
-          <span>Advanced Level</span>
-          <ul>
-            <li>Perfomance</li>
-            <li>Acsessabilite</li>
-            <li>JAM stack</li>
-          </ul>
-          <a class="card__nav-next" href="#">next card &#x21DD</a>
-          <a class="card__nav-see" href="#">see more &#8669;</a>
+        <div class="card three">
+          <div class=" card__content">
+            <span>Advanced Level</span>
+            <ul>
+              <li>Perfomance</li>
+              <li>Acsessabilite</li>
+              <li>JAM stack</li>
+            </ul>
+            <a class="card__nav-next" href="#">next card &#x21DD</a>
+            <a class="card__nav-see" href="#">see more &#8669;</a>
+          </div>
         </div>
-      </div>
-    </figure>
+      </figure>
+    </div>
+    <section class="form">
+      <form method="post" name='myform' action="" id="form" class="form__validate"
+        onsubmit="return ValidateForm.validate(event)">
+        <p class="form__title">Create a new account</p>
+        <div class="form__field">
+          <label for="full-name"></label>
+          <i class="fa fa-envelope icon"></i>
+          <input onchange="ValidateForm.validateName()" class="form__name" type="text" name="full-name" id="full-name"
+            placeholder="Name" maxlength="30" />
+          <div class="form__error--name"></div>
+        </div>
+        <div class="form__field">
+          <label for="password-input"></label>
+          <i class="fa fa-lock icon"></i>
+          <input onchange="ValidateForm.validatePassword()" type="password" class="form__password" name="password-input"
+            id="password-input" placeholder="Password" onkeyup="this.value=this.value.replace(/\s+/gi,'')"
+            maxlength="50" />
+          <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
+          <div class="form__error--password"></div>
+        </div>
   </div>
-  <section class="form">
-    <form method="post" name='myform' action="" id="form" class="form__validate"
-      onsubmit="return ValidateForm.validate(event)">
-      <p class="form__title">Create a new account</p>
-      <div class="form__field">
-        <label for="full-name"></label>
-        <i class="fa fa-envelope icon"></i>
-        <input onchange="ValidateForm.validateName()" class="form__name" type="text" name="full-name" id="full-name"
-          placeholder="Name" maxlength="30" />
-        <div class="form__error--name"></div>
-      </div>
-      <div class="form__field">
-        <label for="password-input"></label>
-        <i class="fa fa-lock icon"></i>
-        <input onchange="ValidateForm.validatePassword()" type="password" class="form__password" name="password-input"
-          id="password-input" placeholder="Password" onkeyup="this.value=this.value.replace(/\s+/gi,'')"
-          maxlength="50" />
-        <i onclick="ValidateForm.tooglePassword()" class="fa fa-eye icon"></i>
-        <div class="form__error--password"></div>
-      </div>
-      </div>
-      <div class="form__field">
-        <p>
-          <select onchange="ValidateForm.validateCountry()" class="form__select" id='country-select' name="country">
-            <option value="ukraine">Ukraine</option>
-            <option value="spain">Spain</option>
-            <option value="usa">Usa</option>
-            <option value="nipal">Serbia</option>
-            <option value="egypt">Egypt</option>
-            <option value="rome">Georgia</option>
-            <option value="canada">Canada</option>
-            <option value="india">India</option>
-            <option value="russia">Russia</option>
-            <option value="china">China</option>
-          </select>
-        </p>
-        <div class="form__error--country"></div>
-      </div>
-      <div class="form__field">
-        <span>
-          <input type="radio" name="gender" id="male-input" required />
-          <label for="male-input">Male</label>
-          <input type="radio" name="gender" id="female-input" required />
-          <label for="female-input">Female</label>
-        </span>
-      </div>
-      <div class="form__field">
-        <span>
-          <input onchange="ValidateForm.btnCheck()" type="checkbox" name="terms" id="terms" />
-          <label for="terms">Accept <a href="#">terms</a> and
-            <a href="#">conditions</a></label>
-        </span>
-      </div>
-      <button class="btn form__btn" type="submit">Sign Up</button>
-    </form>
+  <div class="form__field">
+    <p>
+      <select onchange="ValidateForm.validateCountry()" class="form__select" id='country-select' name="country">
+        <option value="ukraine">Ukraine</option>
+        <option value="spain">Spain</option>
+        <option value="usa">Usa</option>
+        <option value="nipal">Serbia</option>
+        <option value="egypt">Egypt</option>
+        <option value="rome">Georgia</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+        <option value="russia">Russia</option>
+        <option value="china">China</option>
+      </select>
+    </p>
+    <div class="form__error--country"></div>
+  </div>
+  <div class="form__field">
+    <span>
+      <input type="radio" name="gender" id="male-input" required />
+      <label for="male-input">Male</label>
+      <input type="radio" name="gender" id="female-input" required />
+      <label for="female-input">Female</label>
+    </span>
+  </div>
+  <div class="form__field">
+    <span>
+      <input onchange="ValidateForm.btnCheck()" type="checkbox" name="terms" id="terms" />
+      <label for="terms">Accept <a href="#">terms</a> and
+        <a href="#">conditions</a></label>
+    </span>
+  </div>
+  <button class="btn form__btn" type="submit">Sign Up</button>
+  </form>
   </section>
   <main class="wrapper">
     <div class="cards">
@@ -341,3 +350,30 @@
 </body>
 
 </html>
+
+
+
+<!-- <div class="animations">
+    <div class="animated-block">
+        <div class="folding-box folding-box_button">
+            <div class="folding-box__wrapper">
+                <h2 class="folding-box__title">
+                    Delete this item?
+                </h2>
+                <p class="folding-box__text">
+                    This operation will permanently delete this
+                    item and all its dependencies. This action
+                    <strong>cannot be undone</strong>.
+                </p>
+                <div class="folding-box__buttons">
+                    <button class="folding-box__button js-fold-btn btn delete__btn--yes">
+                        Oh no, bring me back
+                    </button>
+                    <button class="folding-box__button folding-box__button_filled js-fold-btn delete__btn--no">
+                        I understand, delete it
+                    </button>
+                </div>
+            </div>
+            <button class="folding-box__folded-button js-start-btn delete__btn--main">Delete</и>
+        </div>
+    </div> -->

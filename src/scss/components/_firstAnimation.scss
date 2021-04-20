@@ -1,170 +1,143 @@
-.delete {
-  width: 170px;
-  height: 70px;
-  border: 1px solid red;
-  background-color: red;
-  border-radius: 25px;
-  text-align: center;
-  line-height: 4;
+.animated__block {
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 350px;
+  background: rgb(13, 13, 104);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
-
-  &__popup {
-    position: absolute;
-    top: -100%;
-    right: -100%;
-    width: 500px;
-    height: 275px;
-    border: 5px solid red;
-    border-radius: 25px;
-    background-color: #fff;
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    animation: block 0.6s ease-in;
-  }
-
-  &__btn--main {
-    text-decoration: none;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-
-  }
-
-  &__btn--yes {
-    color: red;
-    outline: none;
-
-  }
-
-  &__btn--no {
-    background-color: red;
-    color: #fff;
-    outline: none;
-  }
-
-  &__text {
-    font-size: 16px;
-    animation: textBounce 0.7s ease-in-out;
-    line-height: 25px;
-    padding: 10px;
-  }
-
+.modal__box {
+  position: absolute;
+  width: 350px;
+  height: 85px;
+  min-height: 30px;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 10px solid rgb(212, 26, 26);
+  border-radius: 30px;
+  background: #fff;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   &__title {
-    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 36px;
     color: red;
-    font-weight: 600;
-    animation: textBounce 0.7s ease-in-out;
   }
-
-  .btn {
-    text-decoration: none;
-    border: 3px solid red;
-    padding: 20px;
-    border-radius: 25px;
-    margin: 10px;
+  &__text {
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+ 
+  &__button {
+    padding: 20px 30px;
     cursor: pointer;
+    outline: none;
+    background: none;
+    border: 3px solid red;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+  }
+  &_button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: rgb(212, 26, 26);
+    .modal__box__wrapper {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+  &--red {
+    background: red;
+    color: #fff;
+  }
+  &_container {
+    .modal__box__folded-button {
+      display: none;
+    }
+    .modal__box__wrapper {
+      animation: modal 0.8s forwards;
+
+    }
+  }
+  &__folded-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(212, 26, 26);
+    color: #fff;
+    font-size: 200%;
+  }
+  &_visible {
+    animation: visible 0.5s forwards;
+
+  }
+  &_hide {
+    animation: hide 0.4s forwards;
   }
 }
 
-.active {
-  display: flex;
-}
-
-@keyframes block {
+@keyframes hide {
   0% {
-    transform: scale(0.1);
+    width: 700px;
+    height: 310px;
   }
-
-  10% {
-    transform: scale(0.3);
-  }
-
-  20% {
-    transform: scale(0.6);
-  }
-
-  30% {
-    transform: scale(0.9);
-  }
-
-  40% {
-    transform: scale(1.2);
-  }
-
-  50% {
-    transform: scale(1.5);
-  }
-
-  60% {
-    transform: scale(1.2);
-  }
-
   100% {
-    transform: scale(1);
+    width: 300px;
+    height: 85px;
   }
 }
 
+@keyframes visible {
+  0% {
+    width: 300px;
+    height: 85px;
+  }
+  100% {
+    width: 700px;
+    height: 310px;
+  }
+}
+
+@keyframes modal {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 
 @keyframes textBounce {
   0% {
-    transform: translateY(-15px);
+    transform: translateY(40px);
   }
-
-  30% {
-    transform: translateY(-10px);
-  }
-
-  60% {
-    transform: translateY(-5px);
-  }
-
-  100% {
-    transform: translateY(-0px);
-  }
-}
-
-
-@keyframes back {
-  0% {
-    transform: scale(1);
-  }
-
-  10% {
-    transform: scale(1.2);
-
-  }
-
-  20% {
-    transform: scale(1.5);
-
-  }
-
-  30% {
-    transform: scale(1.2);
-  }
-
-  40% {
-    transform: scale(0.9);
-
-  }
-
   50% {
-    transform: scale(0.6);
-
+    transform: translateY(-40px);
   }
-
-  60% {
-    transform: scale(0.3);
-
-  }
-
   100% {
-    transform: scale(0.1);
+    transform: translateY(0);
   }
 }

@@ -108,7 +108,7 @@ const ValidateForm = (function () {
         ? formBtn.removeAttribute("disabled")
         : formBtn.setAttribute("disabled", "true");
     },
-    // toogle eye icon 
+    // toogle eye icon
     tooglePassword: function () {
       if (inputPassword.type === "password") {
         inputPassword.type = "text";
@@ -122,30 +122,13 @@ const ValidateForm = (function () {
       className.style.visibility = "visible";
       className.innerHTML = msg;
     },
-    // function whos clean error 
+    // function whos clean error
     clearError: function (classType, input) {
       classType.style.visibility = "hidden";
       input.classList.remove("form__error");
     },
   };
 })();
-
-// modal window
-
-const btnMain = document.querySelector(".delete__btn--main");
-btnMain.addEventListener("click", () => {
-  document.getElementById("popup1").classList.toggle("active");
-});
-
-const btnYes = document.querySelector(".delete__btn--yes");
-btnYes.addEventListener("click", () => {
-  document.getElementById("popup1").classList.remove("active");
-});
-
-const btnNo = document.querySelector(".delete__btn--no");
-btnNo.addEventListener("click", () => {
-  document.getElementById("popup1").classList.remove("active");
-});
 
 // clock
 let hands = [];
@@ -167,13 +150,11 @@ hands[0].setAttribute("to", shifter(secAngle + 360));
 hands[1].setAttribute("from", shifter(minuteAngle));
 hands[1].setAttribute("to", shifter(minuteAngle + 360));
 
-
 // circle pointer
 const circle = document.querySelector("circle");
+const count = document.getElementById("count");
 const radius = circle.r.baseVal.value;
 const circumference = radius * 2 * Math.PI;
-const count = document.getElementById('count')
-
 
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = `${circumference}`;
@@ -183,8 +164,35 @@ function setProgress(percent) {
   circle.style.strokeDashoffset = offset;
 }
 
-const input = document.querySelector("input");
+const input = document.querySelector("#present");
 input.addEventListener("change", function (e) {
   setProgress(input.value);
-  count.textContent = `${input.value}%`
+  count.textContent = `${input.value}%`;
 });
+
+// modal
+
+const deleteBtn = document.querySelector('.delete__btn'),
+ hideBtn = document.querySelectorAll('.hide'),
+ modalBoxWrapper = document.querySelector('.modal__box__wrapper'),
+ modalBox = document.getElementsByClassName('modal__box')[0];
+
+const hide = () => {
+  modalBox.classList.remove('modal__box_button');
+  modalBox.classList.remove('modal__box_hide');
+  modalBox.classList.add('modal__box_visible');
+  modalBox.classList.add('modal__box_container');
+}
+
+const visible = () => {
+  modalBox.classList.remove('modal__box_container');
+  modalBox.classList.remove('modal__box_visible');
+  modalBox.classList.add('modal__box_hide');
+  modalBox.classList.add('modal__box_button');
+};
+
+for (let i = 0; i < hideBtn.length; i++) {
+  hideBtn[i].addEventListener('click', visible);
+}
+deleteBtn.addEventListener('click', hide);
+
