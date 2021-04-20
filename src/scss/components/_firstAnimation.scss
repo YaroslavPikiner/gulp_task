@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 80vh;
-  margin-bottom: 350px;
   background: rgb(13, 13, 104);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -38,7 +37,7 @@
     justify-content: space-between;
     padding: 0 30px;
   }
- 
+
   &__button {
     padding: 20px 30px;
     cursor: pointer;
@@ -72,7 +71,6 @@
     }
     .modal__box__wrapper {
       animation: modal 0.8s forwards;
-
     }
   }
   &__folded-button {
@@ -86,7 +84,6 @@
   }
   &_visible {
     animation: visible 0.5s forwards;
-
   }
   &_hide {
     animation: hide 0.4s forwards;
