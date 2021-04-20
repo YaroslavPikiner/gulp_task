@@ -111,16 +111,21 @@
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+
   }
   49.7% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+
   }
   49.8% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: rgb(255, 103, 103);
   }
   66.4% {
     top: 50px;
@@ -144,6 +149,7 @@
   }
   100% {
     z-index: 3;
+    background: rgb(255, 103, 103);
   }
 }
 
@@ -162,6 +168,7 @@
   }
   16.6% {
     z-index: 3;
+    background: rgb(255, 103, 103);
   }
   33.2% {
     top: 0px;
@@ -185,22 +192,29 @@
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: rgb(255, 103, 103);
   }
   83.2% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+    
   }
   83.3% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: rgb(255, 103, 103);
+
   }
   100% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: rgb(255, 103, 103);
   }
+
 }
 
 @keyframes onBottom {
@@ -208,16 +222,22 @@
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+    
   }
   16.5% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+
   }
   16.6% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: rgb(255, 103, 103);
+
   }
   33.2% {
     top: 50px;
@@ -255,5 +275,7 @@
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: rgb(255, 103, 103);
+
   }
 }

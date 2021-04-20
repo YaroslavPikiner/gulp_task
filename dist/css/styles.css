@@ -636,18 +636,21 @@ li>i {
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: #ff6767;
   }
 
   49.7% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: #ff6767;
   }
 
   49.8% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: #ff6767;
   }
 
   66.4% {
@@ -676,6 +679,7 @@ li>i {
 
   100% {
     z-index: 3;
+    background: #ff6767;
   }
 }
 
@@ -696,6 +700,7 @@ li>i {
 
   16.6% {
     z-index: 3;
+    background: #ff6767;
   }
 
   33.2% {
@@ -723,24 +728,28 @@ li>i {
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: #ff6767;
   }
 
   83.2% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: #ff6767;
   }
 
   83.3% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: #ff6767;
   }
 
   100% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: #ff6767;
   }
 }
 
@@ -749,18 +758,21 @@ li>i {
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: #ff6767;
   }
 
   16.5% {
     top: 50px;
     left: 50px;
     z-index: 1;
+    background: #ff6767;
   }
 
   16.6% {
     top: 50px;
     left: 50px;
     z-index: 2;
+    background: #ff6767;
   }
 
   33.2% {
@@ -805,6 +817,7 @@ li>i {
     top: 100px;
     left: 100px;
     z-index: 1;
+    background: #ff6767;
   }
 }
 
