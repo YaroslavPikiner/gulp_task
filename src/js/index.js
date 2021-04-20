@@ -167,6 +167,7 @@ hands[0].setAttribute("to", shifter(secAngle + 360));
 hands[1].setAttribute("from", shifter(minuteAngle));
 hands[1].setAttribute("to", shifter(minuteAngle + 360));
 
+
 // circle pointer
 const circle = document.querySelector("circle");
 const radius = circle.r.baseVal.value;

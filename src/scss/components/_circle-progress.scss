@@ -7,27 +7,6 @@
   flex-direction: column;
 }
 
-.circle__progress > input {
-  width: 10%;
-  height: 40px;
-  font-size: 26px;
-}
-
-.progress-ring__circle {
-  stroke-dasharray: 10 20;
-  margin-bottom: 20px;
-}
-
-.progress-ring__circle {
-  transition: stroke-dashoffset 0.35s;
-}
-
-.progress-ring__circle {
-  transition: stroke-dashoffset 0.35s;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-
 .circle__progress-title {
   font-size: 30px;
   text-transform: uppercase;
@@ -41,3 +20,18 @@
   text-transform: uppercase;
   color: #fff;
 }
+
+.circle__progress > input {
+  width: 10%;
+  height: 40px;
+  font-size: 21px;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+  margin-bottom: 20px;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+

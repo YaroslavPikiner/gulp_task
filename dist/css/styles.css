@@ -545,7 +545,7 @@ body {
   border: 2px dotted #000;
   position: absolute;
   transform: translateY(0);
-  animation: onTop 10s 2s ease infinite;
+  animation: onTop 10s 1s ease infinite;
   box-shadow: 4px 4px 8px rgba(180,181,185,0.5);
 }
 
@@ -571,7 +571,7 @@ body {
 }
 
 .card .card__content {
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
   position: absolute;
   display: flex;
   justify-content: center;
@@ -580,36 +580,44 @@ body {
 }
 
 .card__content span {
+  width: 100%;
   font-size: 24px;
   top: 50%;
   left: 50%;
-  transform: translate(10%, 100%);
+  transform: translate(30px, 100%);
   margin-bottom: 100px;
 }
 
 .card__content ul {
-  top: 50%;
-  left: 45%;
-  transform: translate(25%, 30%);
+  width: 100%;
+  transform: translate(50px, 0);
   margin-bottom: 150px;
-}
-
-.card__nav-next {
-  width: 120px;
-  position: absolute;
-  left: 140%;
-  top: 50%;
-  transform: rotate(90deg);
+  list-style-type: circle;
 }
 
 .card__content>ul>li {
   margin-bottom: 20px;
 }
 
+.card__nav-next {
+  width: 120px;
+  position: absolute;
+  left: 220px;
+  top: 50%;
+  transform: rotate(90deg);
+  text-decoration: none;
+  color: #000;
+}
+
+.card__nav-see {
+  text-decoration: none;
+  color: #000;
+}
+
 @keyframes onTop {
   5% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: #e02923;
@@ -625,7 +633,7 @@ body {
 
   40% {
     transform: translateY(0);
-    z-index: 0;
+    z-index: 1;
     left: 40px;
     top: 40px;
     background-color: #e02923;
@@ -682,8 +690,8 @@ body {
   }
 
   45% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: #e02923;
@@ -756,8 +764,8 @@ body {
   }
 
   75% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: #e02923;
@@ -829,27 +837,6 @@ body {
   flex-direction: column;
 }
 
-.circle__progress>input {
-  width: 10%;
-  height: 40px;
-  font-size: 26px;
-}
-
-.progress-ring__circle {
-  stroke-dasharray: 10 20;
-  margin-bottom: 20px;
-}
-
-.progress-ring__circle {
-  transition: stroke-dashoffset 0.35s;
-}
-
-.progress-ring__circle {
-  transition: stroke-dashoffset 0.35s;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-
 .circle__progress-title {
   font-size: 30px;
   text-transform: uppercase;
@@ -862,6 +849,20 @@ body {
   font-weight: 200;
   text-transform: uppercase;
   color: #fff;
+}
+
+.circle__progress>input {
+  width: 10%;
+  height: 40px;
+  font-size: 21px;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 10 20;
+  margin-bottom: 20px;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
 
 @font-face {

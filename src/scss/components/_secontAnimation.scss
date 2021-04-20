@@ -1,6 +1,7 @@
 body {
   background-color: #f7f7f7;
 }
+
 .stack {
   position: relative;
   margin-top: 50vh;
@@ -17,7 +18,7 @@ body {
   border: 2px dotted #000;
   position: absolute;
   transform: translateY(0);
-  animation: onTop 10s 2s ease infinite;
+  animation: onTop 10s 1s ease infinite;
   box-shadow: 4px 4px 8px rgba(180, 181, 185, 0.5);
 }
 
@@ -43,8 +44,8 @@ body {
 }
 
 .card .card__content {
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
-    'DejaVu Sans', Verdana, 'sans-serif';
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    "DejaVu Sans", Verdana, "sans-serif";
   position: absolute;
   display: flex;
   justify-content: center;
@@ -53,36 +54,44 @@ body {
 }
 
 .card__content span {
+  width: 100%;
   font-size: 24px;
   top: 50%;
   left: 50%;
-  transform: translate(10%, 100%);
+  transform: translate(30px, 100%);
   margin-bottom: 100px;
 }
 
 .card__content ul {
-  top: 50%;
-  left: 45%;
-  transform: translate(25%, 30%);
+  width: 100%;
+  transform: translate(50px, 0);
   margin-bottom: 150px;
-}
-
-.card__nav-next {
-  width: 120px;
-  position: absolute;
-  left: 140%;
-  top: 50%;
-  transform: rotate(90deg);
+  list-style-type: circle;
 }
 
 .card__content > ul > li {
   margin-bottom: 20px;
 }
 
+.card__nav-next {
+  width: 120px;
+  position: absolute;
+  left: 220px;
+  top: 50%;
+  transform: rotate(90deg);
+  text-decoration: none;
+  color: #000;
+}
+
+.card__nav-see {
+  text-decoration: none;
+  color: #000;
+}
+
 @keyframes onTop {
   5% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: rgb(224, 41, 35);
@@ -96,7 +105,7 @@ body {
   }
   40% {
     transform: translateY(0);
-    z-index: 0;
+    z-index: 1;
     left: 40px;
     top: 40px;
     background-color: rgb(224, 41, 35);
@@ -147,8 +156,8 @@ body {
     background-color: rgb(26, 236, 43);
   }
   45% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: rgb(224, 41, 35);
@@ -213,8 +222,8 @@ body {
     background-color: rgb(26, 236, 43);
   }
   75% {
-    transform: translateY(-350px);
-    z-index: 1;
+    transform: translateY(-450px);
+    z-index: 2;
     left: 20px;
     top: 20px;
     background-color: rgb(224, 41, 35);
